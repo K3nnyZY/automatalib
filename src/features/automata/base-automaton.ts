@@ -1,8 +1,14 @@
 import type { TestResult, Route, Transition, TransitionD, AutomatonConfig } from "@/types/automata";
 
+/**
+ * A discrete logical State within the Automaton containing edges and attributes.
+ */
 export class State {
+  /** The unique state label */
   public label: number | string;
+  /** Complete edge paths originating from this state */
   public next: Edge[];
+  /** Mark representing whether traversal up to this state confirms string acceptance */
   public accept: boolean = false;
 
   constructor(label: number | string) {
@@ -15,8 +21,13 @@ export class State {
   }
 }
 
+/**
+ * Inner class tracking directed directional edge symbols from States.
+ */
 class Edge {
+  /** The character input transitioning over the graph edge */
   public symbol: string;
+  /** The directional pointing target state bound to this step */
   public to: State;
 
   constructor(symbol: string, to: State) {
@@ -78,10 +89,17 @@ export class TransitionsTable {
   }
 }
 
+/**
+ * The core engine of logic machines (Finite Automaton) providing building schemas and tests.
+ */
 export abstract class Automaton {
+  /** The singleton entry-point starting node for evaluation graph parsing */
   public initial_state!: State;
+  /** Internal isolated array preserving accepting final states mapping constraints */
   public accept_states!: State[];
+  /** Custom configurations over generic behavior overrides */
   protected config?: AutomatonConfig;
+  /** Global empty deterministic transition limit character ("ϵ" / "ε") */
   protected empty_symbol!: string;
 
   constructor(data: string, config?: AutomatonConfig) {
@@ -154,6 +172,14 @@ export abstract class Automaton {
     return Array.from(reachableStates);
   }
 
+  /**
+   * Tests the generic matching runtime compatibility over an explicit string input string.
+   * Traversing the initialized states following valid arc-edge strings paths against the internal N/DFA engine.
+   *
+   * @param input Raw testing phrase evaluating whether it respects automata language sets.
+   * @throws Validates string payload length limitations checking rejecting meta-characters constraints.
+   * @returns Detailed Test Result payload matching routes status payload
+   */
   public test(input: string): TestResult {
     const emptySymbol = this.empty_symbol;
 

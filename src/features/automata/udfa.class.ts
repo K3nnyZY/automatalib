@@ -1,9 +1,13 @@
-import { State, TransitionsTable } from "./automaton";
-import { NFA } from "./nfa";
-import { DFA, StatesTable } from "./dfa";
-import { LetterGenerator } from "./helper";
+import { State, TransitionsTable } from "./base-automaton";
+import { NFA } from "./nfa.class";
+import { DFA, StatesTable } from "./dfa.class";
+import { LetterGenerator } from "./automata.utils";
 import type { AutomatonConfig, StateD } from "@/types/automata";
 
+/**
+ * Unoptimized Deterministic Finite Automaton. 
+ * Formed from an underlying NFA applying the canonical Subset Construction (Powerset construction) algorithm.
+ */
 export class uDFA extends DFA {
   constructor(expression: string, config?: AutomatonConfig) {
     super(expression, config);

@@ -1,6 +1,6 @@
-export { uDFA } from "./udfa";
-export { NFA } from "./nfa";
-export { mDFA } from "./mdfa";
-export { Automaton, State, TransitionsTable } from "./automaton";
-export { DFA, StatesTable } from "./dfa";
-export { RegExp } from "./regex";
+export { uDFA } from "./udfa.class";
+export { NFA } from "./nfa.class";
+export { mDFA } from "./mdfa.class";
+export { Automaton, State, TransitionsTable } from "./base-automaton";
+export { DFA, StatesTable } from "./dfa.class";
+export { RegExp } from "./regex.class";

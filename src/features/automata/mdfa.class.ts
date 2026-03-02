@@ -1,12 +1,15 @@
 import {
   State,
   TransitionsTable,
-} from "./automaton";
+} from "./base-automaton";
 import type { AutomatonConfig, TransitionD, StateD } from "@/types/automata";
-import { DFA, StatesTable } from "./dfa";
-import { equalStates } from "./helper";
-import { uDFA } from "./udfa";
+import { DFA, StatesTable } from "./dfa.class";
+import { equalStates } from "./automata.utils";
+import { uDFA } from "./udfa.class";
 
+/**
+ * Internal mapping tracker linking combined identifiers from minimized Equivalent States.
+ */
 class Identifiables {
   public table: Map<string, Set<string>>;
 
@@ -22,9 +25,16 @@ class Identifiables {
   }
 }
 
+/**
+ * Minimized Deterministic Finite Automaton (mDFA).
+ * The fully optimized structure grouping equivalent unreachable and identical discrete nodes.
+ */
 export class mDFA extends DFA {
+  /** Unoptimized underlying DFA resolved initially using Subset Construction */
   public uDFA!: uDFA;
+  /** Internal tracking mapping equivalent state nodes combinations */
   public equivalent_states!: StatesTable;
+  /** History preserving replaced state identicals */
   public identifiables!: Identifiables;
 
   constructor(expression: string, config?: AutomatonConfig) {

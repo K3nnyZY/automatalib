@@ -1,15 +1,16 @@
-import { RegExp } from "./regex";
+import { RegExp } from "./regex.class";
 import {
   State,
   Automaton,
   TransitionsTable,
-} from "./automaton";
+} from "./base-automaton";
 import type { SyntaxTreeNode, AutomatonConfig } from "@/types/automata";
 
+/**
+ * Non-Deterministic Finite Automaton (NFA) resolving engine applying mathematical Thompson's construction.
+ */
 export class NFA extends Automaton {
-  /**
-   * The regular expression
-   */
+  /** Embedded internal regex compiled instance containing the parsed Syntax Tree */
   public regexp!: RegExp;
   /**
    * The transition table of the DFA.

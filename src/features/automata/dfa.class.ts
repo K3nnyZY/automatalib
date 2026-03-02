@@ -1,8 +1,12 @@
-import { Automaton, State, TransitionsTable } from "./automaton";
-import { NFA } from "./nfa";
-import { equalStates } from "./helper";
+import { Automaton, State, TransitionsTable } from "./base-automaton";
+import { NFA } from "./nfa.class";
+import { equalStates } from "./automata.utils";
 import type { StateD } from "@/types/automata";
 
+/**
+ * Encapsulates unique logic identifying equivalent states structures 
+ * for merging nodes natively mapped through an internal set.
+ */
 export class StatesTable {
   public table: Set<StateD>;
 
@@ -37,9 +41,16 @@ export class StatesTable {
   }
 }
 
+/**
+ * Deterministic Finite Automaton (DFA) base abstract logic interface.
+ * Ensures the underlying NFA generates specific one-way paths matching formulas.
+ */
 export abstract class DFA extends Automaton {
+  /** Unoptimized underlying NFA component reference graph */
   public NFA!: NFA;
+  /** Internal grouping states graph mappings generated from algorithm implementations */
   public states!: StatesTable;
+  /** Strict 1-to-1 deterministic transitions matrix derived from Subset Construction */
   public transitions!: TransitionsTable;
 
   protected lookUp(label: string, states: Set<State>): State | null {

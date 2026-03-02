@@ -1,21 +1,16 @@
 import type { SyntaxTreeNode } from "@/types/automata";
 
+/**
+ * Mathematical compiler transforming string formula literals into logical Abstract Syntax Tree (AST) Graphs.
+ */
 export class RegExp {
-  /**
-   * The regular expression
-   */
+  /** The human-readable source regular expression phrase */
   public expression: string;
-  /**
-   * The syntax tree of the regular expression
-   */
+  /** Mathematical node hierarchical structure evaluated recursively */
   public syntax_tree: SyntaxTreeNode;
-  /**
-   * The symbols of the regular expression
-   */
+  /** Extracted uniquely preserved language terminal alphabet character set */
   public symbols: string[];
-  /*
-   * Empty symbol to be used on the regexp
-   */
+  /** Internal epsilon representing empty transitions limits */
   protected empty_symbol: string;
 
   constructor(expression: string, empty_symbol: string) {

@@ -1,4 +1,4 @@
-import type { State } from "./automaton";
+import type { State } from "./base-automaton";
 
 /**
  * A helper class to generate localized alphabetical letters (A, B, C... Z, AA, AB...).
