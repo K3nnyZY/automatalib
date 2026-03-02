@@ -1,12 +1,4 @@
-[00:00:00.450] Server  LOG     ✓ Ready in 369ms
-[00:00:10.502] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:28.886] Browser WARN    The style property `box-shadow: 0 0 10px #60a5fa` is invalid
-[00:00:28.886] Browser WARN    The style property `box-shadow: 0 0 10px #60a5fa` is invalid
-[00:14:00.485] Server  LOG     ✓ Compiled in 38ms
-[00:14:29.499] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:15:32.754] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:15:59.787] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:17:00.631] Browser WARN    The style property `box-shadow: 0 0 10px #60a5fa` is invalid
-[00:17:00.631] Browser WARN    The style property `box-shadow: 0 0 10px #60a5fa` is invalid
-[00:17:51.081] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:17:52.097] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:00.428] Server  LOG     ✓ Ready in 312ms
+[00:00:02.738] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:09.311] Browser WARN    The style property `box-shadow: 0 0 10px #60a5fa` is invalid
+[00:00:09.311] Browser WARN    The style property `box-shadow: 0 0 10px #60a5fa` is invalid

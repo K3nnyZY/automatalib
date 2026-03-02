@@ -20,8 +20,10 @@ export default function Home() {
     const [error, setError] = useState<string | null>(null);
     const [testString, setTestString] = useState("");
     const [testResult, setTestResult] = useState<TestResult | null>(null);
+    const [selectedRouteIndex, setSelectedRouteIndex] = useState<number | null>(null);
 
     const cyRef = useRef<cytoscape.Core | null>(null);
+    const timeoutsRef = useRef<NodeJS.Timeout[]>([]);
 
     const generateAutomaton = (overrideType?: "mDFA" | "uDFA" | "NFA") => {
         try {
@@ -73,54 +75,64 @@ export default function Home() {
     const testInputString = () => {
         if (!automaton || !cyRef.current) return;
         try {
+            // Clear existing timeouts
+            timeoutsRef.current.forEach(clearTimeout);
+            timeoutsRef.current = [];
+
             // Reset previous highlights
             cyRef.current.elements().removeClass("highlighted");
+            setSelectedRouteIndex(null);
 
             const result = automaton.test(testString);
             setTestResult(result);
 
-            // Animate Graph Path
-            const allRoutes = result.routes;
-
-            if (allRoutes && allRoutes.length > 0) {
-                let delay = 0;
-                const cy = cyRef.current;
-
-                const maxLength = Math.max(...allRoutes.map(r => r.transitions.length));
-
-                for (let i = 0; i < maxLength; i++) {
-                    setTimeout(() => {
-                        // Clear previous highlights for the 'live' tracing effect
-                        cy.elements().removeClass("highlighted");
-
-                        allRoutes.forEach(route => {
-                            if (i < route.transitions.length) {
-                                const t = route.transitions[i];
-                                // Highlight Node
-                                cy.$(`#${t.from.label}`).addClass("highlighted");
-
-                                // Highlight Edge if not the last node and has a symbol
-                                if (t.symbol !== undefined && i < route.transitions.length - 1) {
-                                    const nextNode = route.transitions[i + 1].from.label;
-                                    cy.edges(`[source = "${t.from.label}"][target = "${nextNode}"][label = "${t.symbol}"]`).addClass("highlighted");
-                                }
-                            }
-                        });
-                    }, delay);
-                    delay += 500; // 500ms delay per step
-                }
-
-                // Clear the absolute final state after the animation finishes
-                setTimeout(() => {
-                    cy.elements().removeClass("highlighted");
-                }, delay);
-            }
-
+            // We now wait for user interaction to animate a specific route
         } catch (e: any) {
             setError(e.message);
             setTestResult(null);
             cyRef.current?.elements().removeClass("highlighted");
         }
+    };
+
+    const animateRoute = (routeIndex: number) => {
+        if (!testResult || !cyRef.current) return;
+
+        // Clear existing timeouts
+        timeoutsRef.current.forEach(clearTimeout);
+        timeoutsRef.current = [];
+
+        setSelectedRouteIndex(routeIndex);
+
+        const route = testResult.routes[routeIndex];
+        const cy = cyRef.current;
+
+        // Reset previous highlights
+        cy.elements().removeClass("highlighted");
+
+        let delay = 0;
+        route.transitions.forEach((t, i) => {
+            // Highlight Node
+            timeoutsRef.current.push(setTimeout(() => {
+                cy.elements().removeClass("highlighted"); // clear everything
+                cy.$(`#${t.from.label}`).addClass("highlighted"); // mark node
+            }, delay));
+            delay += 500;
+
+            // Highlight Edge transition
+            if (t.symbol !== undefined && i < route.transitions.length - 1) {
+                timeoutsRef.current.push(setTimeout(() => {
+                    cy.elements().removeClass("highlighted"); // clear node mark
+                    const nextNode = route.transitions[i + 1].from.label;
+                    cy.edges(`[source = "${t.from.label}"][target = "${nextNode}"][label = "${t.symbol}"]`).addClass("highlighted"); // mark edge
+                }, delay));
+                delay += 500;
+            }
+        });
+
+        // Clear absolute status at end
+        timeoutsRef.current.push(setTimeout(() => {
+            cy.elements().removeClass("highlighted");
+        }, delay));
     };
 
     // Extract Symbols mapping
@@ -299,58 +311,71 @@ export default function Home() {
                         </div>
                     </div>
 
-                    {/* Footer Tester */}
-                    <div className="mt-4 flex gap-2">
-                        <input
-                            type="text"
-                            value={testString}
-                            onChange={(e) => setTestString(e.target.value)}
-                            onKeyDown={(e) => e.key === "Enter" && testInputString()}
-                            placeholder="Enter a string to test with the automaton or leave blank to enter an empty string..."
-                            className="flex-1 rounded border border-slate-200 px-4 py-2.5 text-sm shadow-sm outline-none focus:border-slate-400"
-                        />
-                        <button
-                            onClick={testInputString}
-                            className="bg-slate-900 text-white px-6 py-2 rounded text-sm font-medium hover:bg-slate-800 flex items-center gap-2"
-                        >
-                            Test
-                        </button>
-                    </div>
+                    {/* Footer Tester Area */}
+                    <div className="h-72 mt-4 flex flex-col gap-2 shrink-0">
+                        <div className="flex gap-2">
+                            <input
+                                type="text"
+                                value={testString}
+                                onChange={(e) => setTestString(e.target.value)}
+                                onKeyDown={(e) => e.key === "Enter" && testInputString()}
+                                placeholder="Enter a string to test with the automaton or leave blank to enter an empty string..."
+                                className="flex-1 rounded border border-slate-200 px-4 py-2.5 text-sm shadow-sm outline-none focus:border-slate-400"
+                            />
+                            <button
+                                onClick={testInputString}
+                                className="bg-slate-900 text-white px-6 py-2 rounded text-sm font-medium hover:bg-slate-800 flex items-center gap-2 transition-colors"
+                            >
+                                Test
+                            </button>
+                        </div>
 
-                    {testResult !== null && (
-                        <div className="mt-4 flex flex-col gap-3">
-                            <div className={`text-sm font-medium px-2 ${testResult.accept ? "text-green-600" : "text-red-500"}`}>
-                                {testResult.accept ? `✓ Accepted: "${testString}" belongs to the language.` : `✕ Rejected: "${testString}" is invalid.`}
-                            </div>
+                        {/* Static Path Container */}
+                        <div className="flex-1 bg-white border border-slate-200 shadow-sm rounded-md p-3 overflow-y-auto custom-scrollbar flex flex-col">
+                            {testResult === null ? (
+                                <div className="m-auto text-slate-400 text-sm">Paths evaluated during tests will be listed here.</div>
+                            ) : (
+                                <div className="flex flex-col gap-3">
+                                    <div className={`text-sm font-bold flex items-center justify-between px-1 ${testResult.accept ? "text-emerald-600" : "text-red-500"}`}>
+                                        <span>{testResult.accept ? `✓ Accepted: "${testString}" belongs to the language.` : `✕ Rejected: "${testString}" is invalid.`}</span>
+                                        <span className="text-xs uppercase tracking-wider text-slate-500 font-semibold">Paths Evaluated ({testResult.routes.length})</span>
+                                    </div>
 
-                            {/* Render All Paths */}
-                            {testResult.routes.length > 0 && (
-                                <div className="space-y-2 max-h-[30vh] overflow-y-auto pr-2 custom-scrollbar">
-                                    <h3 className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">Paths Evaluated ({testResult.routes.length}):</h3>
-                                    {testResult.routes.map((route: any, rIndex: number) => (
-                                        <div key={rIndex} className={`text-xs font-mono p-2.5 rounded border shadow-sm overflow-x-auto whitespace-nowrap ${route.valid ? 'bg-emerald-50 border-emerald-300' : 'bg-white border-slate-200 text-slate-500'}`}>
-                                            <span className={`font-bold mr-3 ${route.valid ? 'text-emerald-700' : 'text-slate-400'}`}>
-                                                {route.valid ? '✓ ACCEPTED:' : '✕ REJECTED:'}
-                                            </span>
-                                            {route.transitions.map((t: any, i: number) => (
-                                                <span key={i} className="inline-flex items-center">
-                                                    <span className={`inline-block px-1.5 py-0.5 rounded border ${i === route.transitions.length - 1 && route.valid
-                                                        ? 'bg-emerald-500 border-emerald-600 text-white font-bold shadow-sm'
-                                                        : (route.valid ? 'bg-emerald-100 border-emerald-300 text-emerald-800' : 'bg-slate-100 border-slate-200 text-slate-600')
-                                                        }`}>
-                                                        {t.from.label}
+                                    <div className="space-y-2">
+                                        {testResult.routes.map((route: any, rIndex: number) => {
+                                            const isSelected = selectedRouteIndex === rIndex;
+                                            return (
+                                                <button
+                                                    key={rIndex}
+                                                    onClick={() => animateRoute(rIndex)}
+                                                    className={`w-full text-left text-xs font-mono p-2.5 rounded border shadow-sm overflow-x-auto whitespace-nowrap transition-all duration-200 
+                                                        ${isSelected ? 'ring-2 ring-blue-500 ring-offset-1' : 'hover:border-blue-400 hover:shadow-md'} 
+                                                        ${route.valid ? 'bg-emerald-50 border-emerald-300' : 'bg-slate-50 border-slate-200 text-slate-500'}`}
+                                                >
+                                                    <span className={`font-bold mr-3 ${route.valid ? 'text-emerald-700' : 'text-slate-400'}`}>
+                                                        {route.valid ? '✓ ACCEPTED:' : '✕ REJECTED:'}
                                                     </span>
-                                                    {t.symbol !== undefined && (
-                                                        <span className={`mx-1.5 ${route.valid ? 'text-emerald-500 font-bold' : 'text-slate-300'}`}>-{t.symbol}→</span>
-                                                    )}
-                                                </span>
-                                            ))}
-                                        </div>
-                                    ))}
+                                                    {route.transitions.map((t: any, i: number) => (
+                                                        <span key={i} className="inline-flex items-center">
+                                                            <span className={`inline-block px-1.5 py-0.5 rounded border transition-colors ${i === route.transitions.length - 1 && route.valid
+                                                                ? 'bg-emerald-500 border-emerald-600 text-white font-bold shadow-sm'
+                                                                : (route.valid ? 'bg-emerald-100 border-emerald-300 text-emerald-800' : 'bg-white border-slate-200 text-slate-600')
+                                                                }`}>
+                                                                {t.from.label}
+                                                            </span>
+                                                            {t.symbol !== undefined && (
+                                                                <span className={`mx-1.5 ${route.valid ? 'text-emerald-500 font-bold' : 'text-slate-300'}`}>-{t.symbol}→</span>
+                                                            )}
+                                                        </span>
+                                                    ))}
+                                                </button>
+                                            );
+                                        })}
+                                    </div>
                                 </div>
                             )}
                         </div>
-                    )}
+                    </div>
 
                 </main>
             </div>
