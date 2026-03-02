@@ -1,149 +1,689 @@
-[00:00:00.428] Server  LOG     ✓ Ready in 312ms
-[00:00:02.738] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:09.311] Browser WARN    The style property `box-shadow: 0 0 10px #60a5fa` is invalid
-[00:00:09.311] Browser WARN    The style property `box-shadow: 0 0 10px #60a5fa` is invalid
-[00:02:36.326] Server  LOG     ✓ Compiled in 15ms
-[00:02:36.418] Browser WARN    The style property `box-shadow: 0 0 10px #34d399` is invalid
-[00:02:36.418] Browser WARN    The style property `box-shadow: 0 0 10px #fb7185` is invalid
-[00:03:01.302] Server  LOG     ✓ Compiled in 17ms
-[00:03:49.491] Server  LOG     ✓ Compiled in 8ms
-[00:04:04.990] Browser ERROR   uncaughtError: ReferenceError: hlClass is not defined
-[00:04:05.672] Browser ERROR   uncaughtError: ReferenceError: hlClass is not defined
-[00:04:06.414] Browser ERROR   uncaughtError: ReferenceError: hlClass is not defined
-[00:04:07.416] Browser ERROR   uncaughtError: ReferenceError: hlClass is not defined
-[00:04:08.416] Browser ERROR   uncaughtError: ReferenceError: hlClass is not defined
-[00:04:09.416] Browser ERROR   uncaughtError: ReferenceError: hlClass is not defined
-[00:04:10.417] Browser ERROR   uncaughtError: ReferenceError: hlClass is not defined
-[00:04:11.416] Browser ERROR   uncaughtError: ReferenceError: hlClass is not defined
-[00:04:16.326] Server  LOG     ✓ Compiled in 8ms
-[00:04:48.867] Server  LOG     ✓ Compiled in 8ms
-[00:05:08.880] Server  LOG     ✓ Compiled in 15ms
-[00:05:11.259] Server  LOG     ✓ Compiled in 6ms
-[00:05:17.926] Server  LOG     ✓ Compiled in 11ms
-[00:05:21.009] Server  LOG     ✓ Compiled in 24ms
-[00:08:39.896] Server  LOG     ✓ Compiled in 13ms
-[00:08:56.604] Server  LOG     ✓ Compiled in 11ms
-[00:08:59.302] Server  LOG     ✓ Compiled in 9ms
-[00:09:04.107] Server  LOG     ✓ Compiled in 13ms
-[00:09:08.775] Server  LOG     ✓ Compiled in 10ms
-[00:09:11.981] Server  LOG     ✓ Compiled in 10ms
-[00:09:16.561] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:09:25.887] Browser WARN    The style property `box-shadow: 0 0 10px #34d399` is invalid
-[00:09:25.887] Browser WARN    The style property `box-shadow: 0 0 10px #fb7185` is invalid
-[00:09:25.887] Browser WARN    The style property `box-shadow: 0 0 10px #34d399` is invalid
-[00:09:25.887] Browser WARN    The style property `box-shadow: 0 0 10px #fb7185` is invalid
-[00:09:33.249] Server  LOG     ✓ Compiled in 10ms
-[00:09:54.418] Server  LOG     ✓ Compiled in 8ms
-[00:09:54.514] Browser WARN    The style property `line-color: #000000ff` is invalid
-[00:09:54.515] Browser WARN    The style property `box-shadow: 0 0 10px #34d399` is invalid
-[00:09:54.515] Browser WARN    The style property `box-shadow: 0 0 10px #fb7185` is invalid
-[00:09:58.465] Server  LOG     ✓ Compiled in 12ms
-[00:09:58.556] Browser WARN    The style property `line-color: #000000ff` is invalid
-[00:09:58.556] Browser WARN    The style property `target-arrow-color: #000000ff` is invalid
-[00:09:58.556] Browser WARN    The style property `box-shadow: 0 0 10px #34d399` is invalid
-[00:09:58.556] Browser WARN    The style property `box-shadow: 0 0 10px #fb7185` is invalid
-[00:10:12.140] Server  LOG     ✓ Compiled in 11ms
-[00:10:12.225] Browser WARN    The style property `box-shadow: 0 0 10px #34d399` is invalid
-[00:10:12.225] Browser WARN    The style property `box-shadow: 0 0 10px #fb7185` is invalid
-[00:10:16.109] Server  LOG     ✓ Compiled in 9ms
-[00:10:16.191] Browser WARN    The style property `border-color: #000000ff` is invalid
-[00:10:16.191] Browser WARN    The style property `box-shadow: 0 0 10px #34d399` is invalid
-[00:10:16.191] Browser WARN    The style property `box-shadow: 0 0 10px #fb7185` is invalid
-[00:10:26.361] Server  LOG     ✓ Compiled in 8ms
-[00:10:26.442] Browser WARN    The style property `background-color: #c98383ff` is invalid
-[00:10:26.442] Browser WARN    The style property `border-color: #000000ff` is invalid
-[00:10:26.442] Browser WARN    The style property `box-shadow: 0 0 10px #34d399` is invalid
-[00:10:26.442] Browser WARN    The style property `box-shadow: 0 0 10px #fb7185` is invalid
-[00:10:27.327] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:10:28.099] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:10:36.105] Browser WARN    The style property `background-color: #c98383ff` is invalid
-[00:10:36.105] Browser WARN    The style property `border-color: #000000ff` is invalid
-[00:10:36.105] Browser WARN    The style property `box-shadow: 0 0 10px #34d399` is invalid
-[00:10:36.105] Browser WARN    The style property `box-shadow: 0 0 10px #fb7185` is invalid
-[00:10:36.105] Browser WARN    The style property `background-color: #c98383ff` is invalid
-[00:10:36.105] Browser WARN    The style property `border-color: #000000ff` is invalid
-[00:10:36.105] Browser WARN    The style property `box-shadow: 0 0 10px #34d399` is invalid
-[00:10:36.105] Browser WARN    The style property `box-shadow: 0 0 10px #fb7185` is invalid
-[00:10:40.833] Server  LOG     ✓ Compiled in 7ms
-[00:10:40.913] Browser WARN    The style property `background-color: #ebdfdfff` is invalid
-[00:10:40.913] Browser WARN    The style property `border-color: #000000ff` is invalid
-[00:10:40.913] Browser WARN    The style property `box-shadow: 0 0 10px #34d399` is invalid
-[00:10:40.913] Browser WARN    The style property `box-shadow: 0 0 10px #fb7185` is invalid
-[00:10:47.398] Server  LOG     ✓ Compiled in 10ms
-[00:10:47.479] Browser WARN    The style property `box-shadow: 0 0 10px #34d399` is invalid
-[00:10:47.479] Browser WARN    The style property `box-shadow: 0 0 10px #fb7185` is invalid
-[00:10:48.203] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:10:48.449] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:10:51.125] Browser WARN    The style property `box-shadow: 0 0 10px #34d399` is invalid
-[00:10:51.125] Browser WARN    The style property `box-shadow: 0 0 10px #fb7185` is invalid
-[00:10:51.125] Browser WARN    The style property `box-shadow: 0 0 10px #34d399` is invalid
-[00:10:51.125] Browser WARN    The style property `box-shadow: 0 0 10px #fb7185` is invalid
-[00:10:57.471] Server  LOG     ✓ Compiled in 8ms
-[00:10:57.551] Browser WARN    The style property `background-color: #000000ff` is invalid
-[00:10:57.551] Browser WARN    The style property `box-shadow: 0 0 10px #34d399` is invalid
-[00:10:57.551] Browser WARN    The style property `box-shadow: 0 0 10px #fb7185` is invalid
-[00:10:59.235] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:11:02.161] Browser WARN    The style property `background-color: #000000ff` is invalid
-[00:11:02.161] Browser WARN    The style property `box-shadow: 0 0 10px #34d399` is invalid
-[00:11:02.161] Browser WARN    The style property `box-shadow: 0 0 10px #fb7185` is invalid
-[00:11:02.161] Browser WARN    The style property `background-color: #000000ff` is invalid
-[00:11:02.161] Browser WARN    The style property `box-shadow: 0 0 10px #34d399` is invalid
-[00:11:02.161] Browser WARN    The style property `box-shadow: 0 0 10px #fb7185` is invalid
-[00:11:08.388] Server  LOG     ✓ Compiled in 8ms
-[00:11:08.467] Browser WARN    The style property `background-color: #000000ff` is invalid
-[00:11:08.467] Browser WARN    The style property `border-color: #ffffffff` is invalid
-[00:11:08.467] Browser WARN    The style property `box-shadow: 0 0 10px #34d399` is invalid
-[00:11:08.467] Browser WARN    The style property `box-shadow: 0 0 10px #fb7185` is invalid
-[00:11:15.084] Server  LOG     ✓ Compiled in 16ms
-[00:11:15.164] Browser WARN    The style property `box-shadow: 0 0 10px #34d399` is invalid
-[00:11:15.164] Browser WARN    The style property `box-shadow: 0 0 10px #fb7185` is invalid
-[00:13:06.636] Server  LOG     ✓ Compiled in 8ms
-[00:13:06.714] Browser WARN    The style property `box-shadow: 0 0 10px #34d399` is invalid
-[00:13:06.714] Browser WARN    The style property `box-shadow: 0 0 10px #fb7185` is invalid
-[00:13:22.289] Server  LOG     ✓ Compiled in 11ms
-[00:14:07.634] Server  LOG     ✓ Compiled in 21ms
-[00:14:07.714] Browser WARN    The style property `background-color: #514242ff` is invalid
-[00:14:07.714] Browser WARN    The style property `box-shadow: 0 0 10px #34d399` is invalid
-[00:14:07.714] Browser WARN    The style property `box-shadow: 0 0 10px #fb7185` is invalid
-[00:14:10.772] Server  LOG     ✓ Compiled in 9ms
-[00:14:10.852] Browser WARN    The style property `box-shadow: 0 0 10px #34d399` is invalid
-[00:14:10.852] Browser WARN    The style property `box-shadow: 0 0 10px #fb7185` is invalid
-[00:14:14.955] Server  LOG     ✓ Compiled in 7ms
-[00:14:15.035] Browser WARN    The style property `background-color: #ff0a0aff` is invalid
-[00:14:15.035] Browser WARN    The style property `box-shadow: 0 0 10px #34d399` is invalid
-[00:14:15.035] Browser WARN    The style property `box-shadow: 0 0 10px #fb7185` is invalid
-[00:14:19.769] Server  LOG     ✓ Compiled in 7ms
-[00:14:19.849] Browser WARN    The style property `box-shadow: 0 0 10px #34d399` is invalid
-[00:14:19.849] Browser WARN    The style property `box-shadow: 0 0 10px #fb7185` is invalid
-[00:14:33.932] Server  LOG     ✓ Compiled in 7ms
-[00:14:34.012] Browser WARN    The style property `box-shadow: 0 0 10px #34d399` is invalid
-[00:14:34.012] Browser WARN    The style property `box-shadow: 0 0 10px #fb7185` is invalid
-[00:14:38.053] Server  LOG     ✓ Compiled in 6ms
-[00:14:38.131] Browser WARN    The style property `background-color: #f60000ff` is invalid
-[00:14:38.131] Browser WARN    The style property `box-shadow: 0 0 10px #34d399` is invalid
-[00:14:38.131] Browser WARN    The style property `box-shadow: 0 0 10px #fb7185` is invalid
-[00:14:41.439] Server  LOG     ✓ Compiled in 7ms
-[00:14:41.518] Browser WARN    The style property `box-shadow: 0 0 10px #34d399` is invalid
-[00:14:41.518] Browser WARN    The style property `box-shadow: 0 0 10px #fb7185` is invalid
-[00:14:59.059] Server  LOG     ✓ Compiled in 15ms
-[00:14:59.139] Browser WARN    The style property `text-background-color: #115599ff` is invalid
-[00:14:59.139] Browser WARN    The style property `box-shadow: 0 0 10px #34d399` is invalid
-[00:14:59.139] Browser WARN    The style property `box-shadow: 0 0 10px #fb7185` is invalid
-[00:15:02.359] Server  LOG     ✓ Compiled in 7ms
-[00:15:02.436] Browser WARN    The style property `box-shadow: 0 0 10px #34d399` is invalid
-[00:15:02.436] Browser WARN    The style property `box-shadow: 0 0 10px #fb7185` is invalid
-[00:15:07.092] Server  LOG     ✓ Compiled in 11ms
-[00:15:07.171] Browser WARN    The style property `text-border-color: #000000ff` is invalid
-[00:15:07.171] Browser WARN    The style property `box-shadow: 0 0 10px #34d399` is invalid
-[00:15:07.171] Browser WARN    The style property `box-shadow: 0 0 10px #fb7185` is invalid
-[00:15:09.344] Server  LOG     ✓ Compiled in 6ms
-[00:15:09.422] Browser WARN    The style property `box-shadow: 0 0 10px #34d399` is invalid
-[00:15:09.422] Browser WARN    The style property `box-shadow: 0 0 10px #fb7185` is invalid
-[00:15:13.239] Server  LOG     ✓ Compiled in 8ms
-[00:15:13.319] Browser WARN    The style property `text-border-color: #4c8ce0ff` is invalid
-[00:15:13.319] Browser WARN    The style property `box-shadow: 0 0 10px #34d399` is invalid
-[00:15:13.319] Browser WARN    The style property `box-shadow: 0 0 10px #fb7185` is invalid
-[00:15:15.736] Server  LOG     ✓ Compiled in 6ms
-[00:15:15.815] Browser WARN    The style property `box-shadow: 0 0 10px #34d399` is invalid
-[00:15:15.815] Browser WARN    The style property `box-shadow: 0 0 10px #fb7185` is invalid
-[00:16:30.330] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:00.327] Server  LOG     ✓ Ready in 247ms
+[00:00:01.863] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:02.004] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:07.209] Browser WARN    The style property `box-shadow: 0 0 10px #34d399` is invalid
+[00:00:07.209] Browser WARN    The style property `box-shadow: 0 0 10px #fb7185` is invalid
+[00:00:07.209] Browser WARN    The style property `box-shadow: 0 0 10px #34d399` is invalid
+[00:00:07.209] Browser WARN    The style property `box-shadow: 0 0 10px #fb7185` is invalid
+[00:01:14.908] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:15.490] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:15.613] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:15.787] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:19.100] Server  LOG     ✓ Compiled in 111ms
+[00:02:20.262] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:59.802] Server  LOG     ✓ Compiled in 21ms
+[00:04:32.001] Server  LOG     ✓ Compiled in 14ms
+[00:04:33.979] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:04:43.567] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:07:16.458] Server  LOG     ✓ Compiled in 15ms
+[00:07:20.937] Server  LOG     ✓ Compiled in 9ms
+[00:08:00.677] Server  LOG     ✓ Compiled in 11ms
+[00:08:13.991] Server  LOG     ✓ Compiled in 10ms
+[00:09:04.812] Server  LOG     ✓ Compiled in 11ms
+[00:09:15.860] Server  LOG     ✓ Compiled in 11ms
+[00:09:20.274] Server  LOG     ✓ Compiled in 8ms
+[00:09:46.608] Server  LOG     ✓ Compiled in 13ms
+[00:09:53.974] Server  LOG     ✓ Compiled in 11ms
+[00:10:11.342] Server  LOG     ✓ Compiled in 8ms
+[00:10:58.930] Server  LOG     ✓ Compiled in 311ms
+[00:10:59.472] Browser ERROR   ./src/app/page.tsx:1:20
+Ecmascript file had an error
+> 1 | import { useState, useEffect, useRef, useMemo } from "react";
+    |                    ^^^^^^^^^
+  2 | import CytoscapeComponent from "react-cytoscapejs";
+  3 | import cytoscape from "cytoscape";
+  4 | import dagre from "cytoscape-dagre";
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:10:59.472] Browser ERROR   ./src/app/page.tsx:1:31
+Ecmascript file had an error
+> 1 | import { useState, useEffect, useRef, useMemo } from "react";
+    |                               ^^^^^^
+  2 | import CytoscapeComponent from "react-cytoscapejs";
+  3 | import cytoscape from "cytoscape";
+  4 | import dagre from "cytoscape-dagre";
+
+You're importing a component that needs `useRef`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:10:59.472] Browser ERROR   ./src/app/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useState, useEffect, useRef, useMemo } from "react";
+    |          ^^^^^^^^
+  2 | import CytoscapeComponent from "react-cytoscapejs";
+  3 | import cytoscape from "cytoscape";
+  4 | import dagre from "cytoscape-dagre";
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:10:59.953] Server  ERROR   ⨯ ./src/app/page.tsx:1:20
+Ecmascript file had an error
+> 1 | import { useState, useEffect, useRef, useMemo } from "react";
+    |                    ^^^^^^^^^
+  2 | import CytoscapeComponent from "react-cytoscapejs";
+  3 | import cytoscape from "cytoscape";
+  4 | import dagre from "cytoscape-dagre";
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+
+./src/app/page.tsx:1:31
+Ecmascript file had an error
+> 1 | import { useState, useEffect, useRef, useMemo } from "react";
+    |                               ^^^^^^
+  2 | import CytoscapeComponent from "react-cytoscapejs";
+  3 | import cytoscape from "cytoscape";
+  4 | import dagre from "cytoscape-dagre";
+
+You're importing a component that needs `useRef`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+
+./src/app/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useState, useEffect, useRef, useMemo } from "react";
+    |          ^^^^^^^^
+  2 | import CytoscapeComponent from "react-cytoscapejs";
+  3 | import cytoscape from "cytoscape";
+  4 | import dagre from "cytoscape-dagre";
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+[00:11:00.075] Browser ERROR   ./src/app/page.tsx:1:20
+Ecmascript file had an error
+> 1 | import { useState, useEffect, useRef, useMemo } from "react";
+    |                    ^^^^^^^^^
+  2 | import CytoscapeComponent from "react-cytoscapejs";
+  3 | import cytoscape from "cytoscape";
+  4 | import dagre from "cytoscape-dagre";
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:11:00.075] Browser ERROR   ./src/app/page.tsx:1:31
+Ecmascript file had an error
+> 1 | import { useState, useEffect, useRef, useMemo } from "react";
+    |                               ^^^^^^
+  2 | import CytoscapeComponent from "react-cytoscapejs";
+  3 | import cytoscape from "cytoscape";
+  4 | import dagre from "cytoscape-dagre";
+
+You're importing a component that needs `useRef`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:11:00.075] Browser ERROR   ./src/app/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useState, useEffect, useRef, useMemo } from "react";
+    |          ^^^^^^^^
+  2 | import CytoscapeComponent from "react-cytoscapejs";
+  3 | import cytoscape from "cytoscape";
+  4 | import dagre from "cytoscape-dagre";
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:11:00.333] Browser ERROR   ./src/app/page.tsx:1:20
+Ecmascript file had an error
+> 1 | import { useState, useEffect, useRef, useMemo } from "react";
+    |                    ^^^^^^^^^
+  2 | import CytoscapeComponent from "react-cytoscapejs";
+  3 | import cytoscape from "cytoscape";
+  4 | import dagre from "cytoscape-dagre";
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:11:00.333] Browser ERROR   ./src/app/page.tsx:1:31
+Ecmascript file had an error
+> 1 | import { useState, useEffect, useRef, useMemo } from "react";
+    |                               ^^^^^^
+  2 | import CytoscapeComponent from "react-cytoscapejs";
+  3 | import cytoscape from "cytoscape";
+  4 | import dagre from "cytoscape-dagre";
+
+You're importing a component that needs `useRef`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:11:00.333] Browser ERROR   ./src/app/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useState, useEffect, useRef, useMemo } from "react";
+    |          ^^^^^^^^
+  2 | import CytoscapeComponent from "react-cytoscapejs";
+  3 | import cytoscape from "cytoscape";
+  4 | import dagre from "cytoscape-dagre";
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:11:00.411] Browser ERROR   uncaughtError: Error: ./src/app/page.tsx:1:20
+Ecmascript file had an error
+> 1 | import { useState, useEffect, useRef, useMemo } from "react";
+    |                    ^^^^^^^^^
+  2 | import CytoscapeComponent from "react-cytoscapejs";
+  3 | import cytoscape from "cytoscape";
+  4 | import dagre from "cytoscape-dagre";
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+[00:11:00.555] Browser ERROR   ./src/app/page.tsx:1:20
+Ecmascript file had an error
+> 1 | import { useState, useEffect, useRef, useMemo } from "react";
+    |                    ^^^^^^^^^
+  2 | import CytoscapeComponent from "react-cytoscapejs";
+  3 | import cytoscape from "cytoscape";
+  4 | import dagre from "cytoscape-dagre";
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:11:00.555] Browser ERROR   ./src/app/page.tsx:1:31
+Ecmascript file had an error
+> 1 | import { useState, useEffect, useRef, useMemo } from "react";
+    |                               ^^^^^^
+  2 | import CytoscapeComponent from "react-cytoscapejs";
+  3 | import cytoscape from "cytoscape";
+  4 | import dagre from "cytoscape-dagre";
+
+You're importing a component that needs `useRef`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:11:00.555] Browser ERROR   ./src/app/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useState, useEffect, useRef, useMemo } from "react";
+    |          ^^^^^^^^
+  2 | import CytoscapeComponent from "react-cytoscapejs";
+  3 | import cytoscape from "cytoscape";
+  4 | import dagre from "cytoscape-dagre";
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:11:00.555] Browser ERROR   ./src/app/page.tsx:1:20
+Ecmascript file had an error
+> 1 | import { useState, useEffect, useRef, useMemo } from "react";
+    |                    ^^^^^^^^^
+  2 | import CytoscapeComponent from "react-cytoscapejs";
+  3 | import cytoscape from "cytoscape";
+  4 | import dagre from "cytoscape-dagre";
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:11:00.555] Browser ERROR   ./src/app/page.tsx:1:31
+Ecmascript file had an error
+> 1 | import { useState, useEffect, useRef, useMemo } from "react";
+    |                               ^^^^^^
+  2 | import CytoscapeComponent from "react-cytoscapejs";
+  3 | import cytoscape from "cytoscape";
+  4 | import dagre from "cytoscape-dagre";
+
+You're importing a component that needs `useRef`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:11:00.555] Browser ERROR   ./src/app/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useState, useEffect, useRef, useMemo } from "react";
+    |          ^^^^^^^^
+  2 | import CytoscapeComponent from "react-cytoscapejs";
+  3 | import cytoscape from "cytoscape";
+  4 | import dagre from "cytoscape-dagre";
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:11:02.771] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:11:03.727] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:12:17.119] Server  LOG     ✓ Compiled in 13ms
+[00:12:19.057] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:12:40.338] Browser WARN    The style property `box-shadow: 0 0 10px #34d399` is invalid
+[00:12:40.338] Browser WARN    The style property `box-shadow: 0 0 10px #fb7185` is invalid
+[00:12:40.338] Browser WARN    The style property `box-shadow: 0 0 10px #34d399` is invalid
+[00:12:40.338] Browser WARN    The style property `box-shadow: 0 0 10px #fb7185` is invalid
+[00:15:10.787] Server  LOG     ✓ Compiled in 35ms
+[00:15:11.534] Browser ERROR   ./src/app/page.tsx:1:20
+Ecmascript file had an error
+> 1 | import { useState, useEffect, useRef, useMemo } from "react";
+    |                    ^^^^^^^^^
+  2 | import CytoscapeComponent from "react-cytoscapejs";
+  3 | import cytoscape from "cytoscape";
+  4 | import dagre from "cytoscape-dagre";
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:15:11.534] Browser ERROR   ./src/app/page.tsx:1:31
+Ecmascript file had an error
+> 1 | import { useState, useEffect, useRef, useMemo } from "react";
+    |                               ^^^^^^
+  2 | import CytoscapeComponent from "react-cytoscapejs";
+  3 | import cytoscape from "cytoscape";
+  4 | import dagre from "cytoscape-dagre";
+
+You're importing a component that needs `useRef`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:15:11.534] Browser ERROR   ./src/app/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useState, useEffect, useRef, useMemo } from "react";
+    |          ^^^^^^^^
+  2 | import CytoscapeComponent from "react-cytoscapejs";
+  3 | import cytoscape from "cytoscape";
+  4 | import dagre from "cytoscape-dagre";
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:15:12.368] Server  ERROR   ⨯ ./src/app/page.tsx:1:20
+Ecmascript file had an error
+> 1 | import { useState, useEffect, useRef, useMemo } from "react";
+    |                    ^^^^^^^^^
+  2 | import CytoscapeComponent from "react-cytoscapejs";
+  3 | import cytoscape from "cytoscape";
+  4 | import dagre from "cytoscape-dagre";
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+
+./src/app/page.tsx:1:31
+Ecmascript file had an error
+> 1 | import { useState, useEffect, useRef, useMemo } from "react";
+    |                               ^^^^^^
+  2 | import CytoscapeComponent from "react-cytoscapejs";
+  3 | import cytoscape from "cytoscape";
+  4 | import dagre from "cytoscape-dagre";
+
+You're importing a component that needs `useRef`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+
+./src/app/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useState, useEffect, useRef, useMemo } from "react";
+    |          ^^^^^^^^
+  2 | import CytoscapeComponent from "react-cytoscapejs";
+  3 | import cytoscape from "cytoscape";
+  4 | import dagre from "cytoscape-dagre";
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+[00:15:12.452] Browser ERROR   uncaughtError: Error: ./src/app/page.tsx:1:20
+Ecmascript file had an error
+> 1 | import { useState, useEffect, useRef, useMemo } from "react";
+    |                    ^^^^^^^^^
+  2 | import CytoscapeComponent from "react-cytoscapejs";
+  3 | import cytoscape from "cytoscape";
+  4 | import dagre from "cytoscape-dagre";
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+[00:15:12.589] Browser ERROR   ./src/app/page.tsx:1:20
+Ecmascript file had an error
+> 1 | import { useState, useEffect, useRef, useMemo } from "react";
+    |                    ^^^^^^^^^
+  2 | import CytoscapeComponent from "react-cytoscapejs";
+  3 | import cytoscape from "cytoscape";
+  4 | import dagre from "cytoscape-dagre";
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:15:12.589] Browser ERROR   ./src/app/page.tsx:1:31
+Ecmascript file had an error
+> 1 | import { useState, useEffect, useRef, useMemo } from "react";
+    |                               ^^^^^^
+  2 | import CytoscapeComponent from "react-cytoscapejs";
+  3 | import cytoscape from "cytoscape";
+  4 | import dagre from "cytoscape-dagre";
+
+You're importing a component that needs `useRef`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:15:12.589] Browser ERROR   ./src/app/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useState, useEffect, useRef, useMemo } from "react";
+    |          ^^^^^^^^
+  2 | import CytoscapeComponent from "react-cytoscapejs";
+  3 | import cytoscape from "cytoscape";
+  4 | import dagre from "cytoscape-dagre";
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:15:12.589] Browser ERROR   ./src/app/page.tsx:1:20
+Ecmascript file had an error
+> 1 | import { useState, useEffect, useRef, useMemo } from "react";
+    |                    ^^^^^^^^^
+  2 | import CytoscapeComponent from "react-cytoscapejs";
+  3 | import cytoscape from "cytoscape";
+  4 | import dagre from "cytoscape-dagre";
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:15:12.589] Browser ERROR   ./src/app/page.tsx:1:31
+Ecmascript file had an error
+> 1 | import { useState, useEffect, useRef, useMemo } from "react";
+    |                               ^^^^^^
+  2 | import CytoscapeComponent from "react-cytoscapejs";
+  3 | import cytoscape from "cytoscape";
+  4 | import dagre from "cytoscape-dagre";
+
+You're importing a component that needs `useRef`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:15:12.589] Browser ERROR   ./src/app/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useState, useEffect, useRef, useMemo } from "react";
+    |          ^^^^^^^^
+  2 | import CytoscapeComponent from "react-cytoscapejs";
+  3 | import cytoscape from "cytoscape";
+  4 | import dagre from "cytoscape-dagre";
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:15:13.033] Server  ERROR   ⨯ ./src/app/page.tsx:1:20
+Ecmascript file had an error
+> 1 | import { useState, useEffect, useRef, useMemo } from "react";
+    |                    ^^^^^^^^^
+  2 | import CytoscapeComponent from "react-cytoscapejs";
+  3 | import cytoscape from "cytoscape";
+  4 | import dagre from "cytoscape-dagre";
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+
+./src/app/page.tsx:1:31
+Ecmascript file had an error
+> 1 | import { useState, useEffect, useRef, useMemo } from "react";
+    |                               ^^^^^^
+  2 | import CytoscapeComponent from "react-cytoscapejs";
+  3 | import cytoscape from "cytoscape";
+  4 | import dagre from "cytoscape-dagre";
+
+You're importing a component that needs `useRef`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+
+./src/app/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useState, useEffect, useRef, useMemo } from "react";
+    |          ^^^^^^^^
+  2 | import CytoscapeComponent from "react-cytoscapejs";
+  3 | import cytoscape from "cytoscape";
+  4 | import dagre from "cytoscape-dagre";
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+[00:15:13.112] Browser ERROR   uncaughtError: Error: ./src/app/page.tsx:1:20
+Ecmascript file had an error
+> 1 | import { useState, useEffect, useRef, useMemo } from "react";
+    |                    ^^^^^^^^^
+  2 | import CytoscapeComponent from "react-cytoscapejs";
+  3 | import cytoscape from "cytoscape";
+  4 | import dagre from "cytoscape-dagre";
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+[00:15:13.249] Browser ERROR   ./src/app/page.tsx:1:20
+Ecmascript file had an error
+> 1 | import { useState, useEffect, useRef, useMemo } from "react";
+    |                    ^^^^^^^^^
+  2 | import CytoscapeComponent from "react-cytoscapejs";
+  3 | import cytoscape from "cytoscape";
+  4 | import dagre from "cytoscape-dagre";
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:15:13.249] Browser ERROR   ./src/app/page.tsx:1:31
+Ecmascript file had an error
+> 1 | import { useState, useEffect, useRef, useMemo } from "react";
+    |                               ^^^^^^
+  2 | import CytoscapeComponent from "react-cytoscapejs";
+  3 | import cytoscape from "cytoscape";
+  4 | import dagre from "cytoscape-dagre";
+
+You're importing a component that needs `useRef`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:15:13.249] Browser ERROR   ./src/app/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useState, useEffect, useRef, useMemo } from "react";
+    |          ^^^^^^^^
+  2 | import CytoscapeComponent from "react-cytoscapejs";
+  3 | import cytoscape from "cytoscape";
+  4 | import dagre from "cytoscape-dagre";
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:15:13.249] Browser ERROR   ./src/app/page.tsx:1:20
+Ecmascript file had an error
+> 1 | import { useState, useEffect, useRef, useMemo } from "react";
+    |                    ^^^^^^^^^
+  2 | import CytoscapeComponent from "react-cytoscapejs";
+  3 | import cytoscape from "cytoscape";
+  4 | import dagre from "cytoscape-dagre";
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:15:13.249] Browser ERROR   ./src/app/page.tsx:1:31
+Ecmascript file had an error
+> 1 | import { useState, useEffect, useRef, useMemo } from "react";
+    |                               ^^^^^^
+  2 | import CytoscapeComponent from "react-cytoscapejs";
+  3 | import cytoscape from "cytoscape";
+  4 | import dagre from "cytoscape-dagre";
+
+You're importing a component that needs `useRef`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:15:13.249] Browser ERROR   ./src/app/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useState, useEffect, useRef, useMemo } from "react";
+    |          ^^^^^^^^
+  2 | import CytoscapeComponent from "react-cytoscapejs";
+  3 | import cytoscape from "cytoscape";
+  4 | import dagre from "cytoscape-dagre";
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:17:56.548] Browser ERROR   ./src/app/page.tsx:1:20
+Ecmascript file had an error
+> 1 | import { useState, useEffect, useRef, useMemo } from "react";
+    |                    ^^^^^^^^^
+  2 | import CytoscapeComponent from "react-cytoscapejs";
+  3 | import cytoscape from "cytoscape";
+  4 | import dagre from "cytoscape-dagre";
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:17:56.548] Browser ERROR   ./src/app/page.tsx:1:31
+Ecmascript file had an error
+> 1 | import { useState, useEffect, useRef, useMemo } from "react";
+    |                               ^^^^^^
+  2 | import CytoscapeComponent from "react-cytoscapejs";
+  3 | import cytoscape from "cytoscape";
+  4 | import dagre from "cytoscape-dagre";
+
+You're importing a component that needs `useRef`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:17:56.548] Browser ERROR   ./src/app/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useState, useEffect, useRef, useMemo } from "react";
+    |          ^^^^^^^^
+  2 | import CytoscapeComponent from "react-cytoscapejs";
+  3 | import cytoscape from "cytoscape";
+  4 | import dagre from "cytoscape-dagre";
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:17:58.549] Browser ERROR   ./src/app/page.tsx:1:20
+Ecmascript file had an error
+> 1 | import { useState, useEffect, useRef, useMemo } from "react";
+    |                    ^^^^^^^^^
+  2 | import CytoscapeComponent from "react-cytoscapejs";
+  3 | import cytoscape from "cytoscape";
+  4 | import dagre from "cytoscape-dagre";
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:17:58.549] Browser ERROR   ./src/app/page.tsx:1:31
+Ecmascript file had an error
+> 1 | import { useState, useEffect, useRef, useMemo } from "react";
+    |                               ^^^^^^
+  2 | import CytoscapeComponent from "react-cytoscapejs";
+  3 | import cytoscape from "cytoscape";
+  4 | import dagre from "cytoscape-dagre";
+
+You're importing a component that needs `useRef`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:17:58.549] Browser ERROR   ./src/app/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useState, useEffect, useRef, useMemo } from "react";
+    |          ^^^^^^^^
+  2 | import CytoscapeComponent from "react-cytoscapejs";
+  3 | import cytoscape from "cytoscape";
+  4 | import dagre from "cytoscape-dagre";
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:17:59.550] Browser ERROR   ./src/app/page.tsx:1:20
+Ecmascript file had an error
+> 1 | import { useState, useEffect, useRef, useMemo } from "react";
+    |                    ^^^^^^^^^
+  2 | import CytoscapeComponent from "react-cytoscapejs";
+  3 | import cytoscape from "cytoscape";
+  4 | import dagre from "cytoscape-dagre";
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:17:59.550] Browser ERROR   ./src/app/page.tsx:1:31
+Ecmascript file had an error
+> 1 | import { useState, useEffect, useRef, useMemo } from "react";
+    |                               ^^^^^^
+  2 | import CytoscapeComponent from "react-cytoscapejs";
+  3 | import cytoscape from "cytoscape";
+  4 | import dagre from "cytoscape-dagre";
+
+You're importing a component that needs `useRef`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:17:59.550] Browser ERROR   ./src/app/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useState, useEffect, useRef, useMemo } from "react";
+    |          ^^^^^^^^
+  2 | import CytoscapeComponent from "react-cytoscapejs";
+  3 | import cytoscape from "cytoscape";
+  4 | import dagre from "cytoscape-dagre";
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:17:59.550] Browser ERROR   ./src/app/page.tsx:1:20
+Ecmascript file had an error
+> 1 | import { useState, useEffect, useRef, useMemo } from "react";
+    |                    ^^^^^^^^^
+  2 | import CytoscapeComponent from "react-cytoscapejs";
+  3 | import cytoscape from "cytoscape";
+  4 | import dagre from "cytoscape-dagre";
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:17:59.550] Browser ERROR   ./src/app/page.tsx:1:31
+Ecmascript file had an error
+> 1 | import { useState, useEffect, useRef, useMemo } from "react";
+    |                               ^^^^^^
+  2 | import CytoscapeComponent from "react-cytoscapejs";
+  3 | import cytoscape from "cytoscape";
+  4 | import dagre from "cytoscape-dagre";
+
+You're importing a component that needs `useRef`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:17:59.550] Browser ERROR   ./src/app/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useState, useEffect, useRef, useMemo } from "react";
+    |          ^^^^^^^^
+  2 | import CytoscapeComponent from "react-cytoscapejs";
+  3 | import cytoscape from "cytoscape";
+  4 | import dagre from "cytoscape-dagre";
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:18:04.552] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:20:22.315] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:30:58.708] Server  LOG     ✓ Compiled in 7ms
+[00:31:00.101] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold

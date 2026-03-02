@@ -199,7 +199,7 @@ export default function Home() {
                     Automata Simulator
                 </div>
 
-                <div className="relative w-full max-w-xl flex items-center mr-4">
+                <div className="relative w-full sm:w-3/4 md:w-3/5 lg:w-1/2 xl:w-1/3 flex items-center mr-4">
                     <input
                         type="text"
                         className="w-full rounded-md border border-slate-200 px-4 py-2.5 text-sm shadow-sm outline-none transition-all focus:border-slate-800"
@@ -210,7 +210,7 @@ export default function Home() {
                     />
                     <button
                         onClick={() => generateAutomaton()}
-                        className="absolute right-2 p-1.5 rounded bg-slate-900 text-white hover:bg-slate-800 transition-colors"
+                        className="absolute right-2 p-1.5 rounded bg-slate-900 text-white hover:bg-slate-600 transition-colors cursor-pointer"
                     >
                         <Send size={16} />
                     </button>
@@ -218,10 +218,9 @@ export default function Home() {
             </nav>
 
             {/* Main Content Area */}
-            <div className="flex flex-1 overflow-hidden">
-
+            <div className="flex flex-1 overflow-hidden flex-col sm:flex-row">
                 {/* Left Sidebar Table */}
-                <aside className="w-1/4 min-w-[300px] border-r border-slate-200 overflow-y-auto bg-white p-6">
+                <aside className="w-full sm:w-1/4 min-w-[300px] border-r border-slate-200 overflow-y-auto bg-white p-6 sm:block hidden">
                     <div className="flex flex-col items-center mb-8">
                         <h2 className="text-xl font-bold tracking-tight">Symbols</h2>
                         <p className="text-sm text-slate-600 font-mono mt-1">Σ = {"{"}{symbols.join(", ")}{"}"}</p>
@@ -265,8 +264,6 @@ export default function Home() {
 
                 {/* Right Canvas Area */}
                 <main className="flex-1 flex flex-col relative p-4 bg-slate-50">
-
-                    {/* Dropdown Type Selector */}
                     <div className="w-full bg-white border border-slate-200 rounded-md shadow-sm mb-4">
                         <select
                             className="w-full py-2.5 px-4 text-sm outline-none appearance-none"
@@ -285,7 +282,6 @@ export default function Home() {
 
                     {/* Graph Canvas */}
                     <div className="flex-1 bg-slate-100/50 rounded-md border border-slate-200 relative overflow-hidden">
-
                         {error ? (
                             <div className="flex w-full h-full items-center justify-center text-red-500 font-medium text-sm">
                                 {error}
@@ -304,11 +300,6 @@ export default function Home() {
                             </div>
                         )}
 
-                        <div className="absolute bottom-4 left-0 w-full text-center pointer-events-none">
-                            <p className="text-[11px] text-slate-400">
-                                In some cases, the edges may overlap. To fix this, just drag and drop the nodes until you see all of the edges.
-                            </p>
-                        </div>
                     </div>
 
                     {/* Footer Tester Area */}
@@ -324,7 +315,7 @@ export default function Home() {
                             />
                             <button
                                 onClick={testInputString}
-                                className="bg-slate-900 text-white px-6 py-2 rounded text-sm font-medium hover:bg-slate-800 flex items-center gap-2 transition-colors"
+                                className="bg-slate-900 text-white px-6 py-2 rounded text-sm font-medium hover:bg-slate-600 flex items-center gap-2 transition-colors cursor-pointer"
                             >
                                 Test
                             </button>
