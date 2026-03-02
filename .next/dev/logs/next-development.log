@@ -1,2 +1,6 @@
-[00:00:00.473] Server  LOG     ✓ Ready in 344ms
-[00:00:03.765] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:00.727] Server  LOG     ✓ Ready in 563ms
+[00:00:04.699] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:10.617] Browser WARN    The style property `box-shadow: 0 0 10px #34d399` is invalid
+[00:00:10.617] Browser WARN    The style property `box-shadow: 0 0 10px #fb7185` is invalid
+[00:00:10.617] Browser WARN    The style property `box-shadow: 0 0 10px #34d399` is invalid
+[00:00:10.617] Browser WARN    The style property `box-shadow: 0 0 10px #fb7185` is invalid

@@ -263,7 +263,7 @@ export default function Home() {
                 </aside>
 
                 {/* Right Canvas Area */}
-                <main className="flex-1 flex flex-col relative p-4 bg-slate-50">
+                <main className="flex-1 flex flex-col relative p-4 bg-slate-50 min-w-0 overflow-hidden">
                     <div className="w-full bg-white border border-slate-200 rounded-md shadow-sm mb-4">
                         <select
                             className="w-full py-2.5 px-4 text-sm outline-none appearance-none"
@@ -303,7 +303,7 @@ export default function Home() {
                     </div>
 
                     {/* Footer Tester Area */}
-                    <div className="h-56 mt-4 flex flex-col gap-2 shrink-0">
+                    <div className="h-56 mt-4 flex flex-col gap-2 shrink-0 min-w-0">
                         <div className="flex gap-2">
                             <input
                                 type="text"
@@ -322,12 +322,12 @@ export default function Home() {
                         </div>
 
                         {/* Static Path Container */}
-                        <div className="flex-1 bg-white border border-slate-200 shadow-sm rounded-md p-3 overflow-y-auto custom-scrollbar flex flex-col">
+                        <div className="flex-1 bg-white border border-slate-200 shadow-sm rounded-md p-3 overflow-auto custom-scrollbar flex flex-col min-w-0">
                             {testResult === null ? (
                                 <div className="m-auto text-slate-400 text-sm">Paths evaluated during tests will be listed here.</div>
                             ) : (
-                                <div className="flex flex-col gap-3">
-                                    <div className={`text-sm font-bold flex items-center justify-between px-1 ${testResult.accept ? "text-emerald-600" : "text-red-500"}`}>
+                                <div className="flex flex-col gap-3 min-w-max">
+                                    <div className={`text-sm font-bold flex items-center justify-between px-1 sticky left-0 ${testResult.accept ? "text-emerald-600" : "text-red-500"}`}>
                                         <span>{testResult.accept ? `✓ Accepted: "${testString}" belongs to the language.` : `✕ Rejected: "${testString}" is invalid.`}</span>
                                         <span className="text-xs uppercase tracking-wider text-slate-500 font-semibold">Paths Evaluated ({testResult.routes.length})</span>
                                     </div>
@@ -339,7 +339,7 @@ export default function Home() {
                                                 <button
                                                     key={rIndex}
                                                     onClick={() => animateRoute(rIndex)}
-                                                    className={`w-full text-left text-xs font-mono p-2.5 rounded border shadow-sm overflow-x-auto whitespace-nowrap transition-all duration-200 
+                                                    className={`w-full text-left text-xs font-mono p-2.5 rounded border shadow-sm whitespace-nowrap transition-all duration-200 
                                                         ${isSelected ? 'ring-2 ring-blue-500 ring-offset-1' : 'hover:border-blue-400 hover:shadow-md'} 
                                                         ${route.valid ? 'bg-emerald-50 border-emerald-300' : 'bg-slate-50 border-slate-200 text-slate-500'}`}
                                                 >
