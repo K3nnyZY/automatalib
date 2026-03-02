@@ -80,7 +80,7 @@ export default function Home() {
             timeoutsRef.current = [];
 
             // Reset previous highlights
-            cyRef.current.elements().removeClass("highlighted");
+            cyRef.current.elements().removeClass("highlighted highlighted-success highlighted-error");
             setSelectedRouteIndex(null);
 
             const result = automaton.test(testString);
@@ -105,25 +105,25 @@ export default function Home() {
 
         const route = testResult.routes[routeIndex];
         const cy = cyRef.current;
+        const hlClass = route.valid ? "highlighted-success" : "highlighted-error";
 
         // Reset previous highlights
-        cy.elements().removeClass("highlighted");
+        cy.elements().removeClass("highlighted highlighted-success highlighted-error");
 
         let delay = 0;
         route.transitions.forEach((t, i) => {
             // Highlight Node
             timeoutsRef.current.push(setTimeout(() => {
-                cy.elements().removeClass("highlighted"); // clear everything
-                cy.$(`#${t.from.label}`).addClass("highlighted"); // mark node
+                cy.elements().removeClass("highlighted highlighted-success highlighted-error"); // clear everything
+                cy.$(`#${t.from.label}`).addClass(hlClass); // mark node
             }, delay));
             delay += 500;
-
             // Highlight Edge transition
             if (t.symbol !== undefined && i < route.transitions.length - 1) {
                 timeoutsRef.current.push(setTimeout(() => {
-                    cy.elements().removeClass("highlighted"); // clear node mark
+                    cy.elements().removeClass("highlighted highlighted-success highlighted-error"); // clear node mark
                     const nextNode = route.transitions[i + 1].from.label;
-                    cy.edges(`[source = "${t.from.label}"][target = "${nextNode}"][label = "${t.symbol}"]`).addClass("highlighted"); // mark edge
+                    cy.edges(`[source = "${t.from.label}"][target = "${nextNode}"][label = "${t.symbol}"]`).addClass(hlClass); // mark edge
                 }, delay));
                 delay += 500;
             }
@@ -131,7 +131,7 @@ export default function Home() {
 
         // Clear absolute status at end
         timeoutsRef.current.push(setTimeout(() => {
-            cy.elements().removeClass("highlighted");
+            cy.elements().removeClass("highlighted highlighted-success highlighted-error");
         }, delay));
     };
 
@@ -312,7 +312,7 @@ export default function Home() {
                     </div>
 
                     {/* Footer Tester Area */}
-                    <div className="h-72 mt-4 flex flex-col gap-2 shrink-0">
+                    <div className="h-48 mt-4 flex flex-col gap-2 shrink-0">
                         <div className="flex gap-2">
                             <input
                                 type="text"

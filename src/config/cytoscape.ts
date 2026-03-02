@@ -81,20 +81,38 @@ export const cytoscape_styles = [
         },
     },
     {
-        selector: "node.highlighted",
+        selector: "node.highlighted-success",
         style: {
-            "background-color": "#eff6ff", // blue-50
-            "border-color": "#3b82f6", // blue-500
-            "color": "#1d4ed8", // blue-700
+            "background-color": "#ecfdf5", // emerald-50
+            "border-color": "#10b981", // emerald-500
+            "color": "#047857", // emerald-700
             "border-width": 3,
-            "box-shadow": "0 0 10px #60a5fa",
+            "box-shadow": "0 0 10px #34d399",
         },
     },
     {
-        selector: "edge.highlighted",
+        selector: "edge.highlighted-success",
         style: {
-            "line-color": "#3b82f6", // blue-500
-            "target-arrow-color": "#3b82f6", // blue-500
+            "line-color": "#10b981", // emerald-500
+            "target-arrow-color": "#10b981", // emerald-500
+            "width": 3,
+        },
+    },
+    {
+        selector: "node.highlighted-error",
+        style: {
+            "background-color": "#fff1f2", // rose-50
+            "border-color": "#e11d48", // rose-600
+            "color": "#be123c", // rose-700
+            "border-width": 3,
+            "box-shadow": "0 0 10px #fb7185",
+        },
+    },
+    {
+        selector: "edge.highlighted-error",
+        style: {
+            "line-color": "#e11d48", // rose-600
+            "target-arrow-color": "#e11d48", // rose-600
             "width": 3,
         },
     },

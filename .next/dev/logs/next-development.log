@@ -2,3 +2,22 @@
 [00:00:02.738] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
 [00:00:09.311] Browser WARN    The style property `box-shadow: 0 0 10px #60a5fa` is invalid
 [00:00:09.311] Browser WARN    The style property `box-shadow: 0 0 10px #60a5fa` is invalid
+[00:02:36.326] Server  LOG     ✓ Compiled in 15ms
+[00:02:36.418] Browser WARN    The style property `box-shadow: 0 0 10px #34d399` is invalid
+[00:02:36.418] Browser WARN    The style property `box-shadow: 0 0 10px #fb7185` is invalid
+[00:03:01.302] Server  LOG     ✓ Compiled in 17ms
+[00:03:49.491] Server  LOG     ✓ Compiled in 8ms
+[00:04:04.990] Browser ERROR   uncaughtError: ReferenceError: hlClass is not defined
+[00:04:05.672] Browser ERROR   uncaughtError: ReferenceError: hlClass is not defined
+[00:04:06.414] Browser ERROR   uncaughtError: ReferenceError: hlClass is not defined
+[00:04:07.416] Browser ERROR   uncaughtError: ReferenceError: hlClass is not defined
+[00:04:08.416] Browser ERROR   uncaughtError: ReferenceError: hlClass is not defined
+[00:04:09.416] Browser ERROR   uncaughtError: ReferenceError: hlClass is not defined
+[00:04:10.417] Browser ERROR   uncaughtError: ReferenceError: hlClass is not defined
+[00:04:11.416] Browser ERROR   uncaughtError: ReferenceError: hlClass is not defined
+[00:04:16.326] Server  LOG     ✓ Compiled in 8ms
+[00:04:48.867] Server  LOG     ✓ Compiled in 8ms
+[00:05:08.880] Server  LOG     ✓ Compiled in 15ms
+[00:05:11.259] Server  LOG     ✓ Compiled in 6ms
+[00:05:17.926] Server  LOG     ✓ Compiled in 11ms
+[00:05:21.009] Server  LOG     ✓ Compiled in 24ms

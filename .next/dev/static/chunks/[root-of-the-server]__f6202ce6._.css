@@ -521,6 +521,10 @@
     display: table;
   }
 
+  .h-48 {
+    height: calc(var(--spacing) * 48);
+  }
+
   .h-72 {
     height: calc(var(--spacing) * 72);
   }
@@ -559,6 +563,10 @@
 
   .flex-1 {
     flex: 1;
+  }
+
+  .flex-9 {
+    flex: 9;
   }
 
   .shrink-0 {
@@ -653,6 +661,10 @@
 
   .border-slate-200 {
     border-color: var(--color-slate-200);
+  }
+
+  .border-slate-900 {
+    border-color: var(--color-slate-900);
   }
 
   .bg-emerald-50 {

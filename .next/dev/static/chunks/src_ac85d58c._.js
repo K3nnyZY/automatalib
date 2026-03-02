@@ -960,20 +960,38 @@ const cytoscape_styles = [
         }
     },
     {
-        selector: "node.highlighted",
+        selector: "node.highlighted-success",
         style: {
-            "background-color": "#eff6ff",
-            "border-color": "#3b82f6",
-            "color": "#1d4ed8",
+            "background-color": "#ecfdf5",
+            "border-color": "#10b981",
+            "color": "#047857",
             "border-width": 3,
-            "box-shadow": "0 0 10px #60a5fa"
+            "box-shadow": "0 0 10px #34d399"
         }
     },
     {
-        selector: "edge.highlighted",
+        selector: "edge.highlighted-success",
         style: {
-            "line-color": "#3b82f6",
-            "target-arrow-color": "#3b82f6",
+            "line-color": "#10b981",
+            "target-arrow-color": "#10b981",
+            "width": 3
+        }
+    },
+    {
+        selector: "node.highlighted-error",
+        style: {
+            "background-color": "#fff1f2",
+            "border-color": "#e11d48",
+            "color": "#be123c",
+            "border-width": 3,
+            "box-shadow": "0 0 10px #fb7185"
+        }
+    },
+    {
+        selector: "edge.highlighted-error",
+        style: {
+            "line-color": "#e11d48",
+            "target-arrow-color": "#e11d48",
             "width": 3
         }
     }
@@ -1074,7 +1092,7 @@ function Home() {
             timeoutsRef.current.forEach(clearTimeout);
             timeoutsRef.current = [];
             // Reset previous highlights
-            cyRef.current.elements().removeClass("highlighted");
+            cyRef.current.elements().removeClass("highlighted highlighted-success highlighted-error");
             setSelectedRouteIndex(null);
             const result = automaton.test(testString);
             setTestResult(result);
@@ -1093,29 +1111,30 @@ function Home() {
         setSelectedRouteIndex(routeIndex);
         const route = testResult.routes[routeIndex];
         const cy = cyRef.current;
+        const hlClass = route.valid ? "highlighted-success" : "highlighted-error";
         // Reset previous highlights
-        cy.elements().removeClass("highlighted");
+        cy.elements().removeClass("highlighted highlighted-success highlighted-error");
         let delay = 0;
         route.transitions.forEach((t, i)=>{
             // Highlight Node
             timeoutsRef.current.push(setTimeout(()=>{
-                cy.elements().removeClass("highlighted"); // clear everything
-                cy.$(`#${t.from.label}`).addClass("highlighted"); // mark node
+                cy.elements().removeClass("highlighted highlighted-success highlighted-error"); // clear everything
+                cy.$(`#${t.from.label}`).addClass(hlClass); // mark node
             }, delay));
             delay += 500;
             // Highlight Edge transition
             if (t.symbol !== undefined && i < route.transitions.length - 1) {
                 timeoutsRef.current.push(setTimeout(()=>{
-                    cy.elements().removeClass("highlighted"); // clear node mark
+                    cy.elements().removeClass("highlighted highlighted-success highlighted-error"); // clear node mark
                     const nextNode = route.transitions[i + 1].from.label;
-                    cy.edges(`[source = "${t.from.label}"][target = "${nextNode}"][label = "${t.symbol}"]`).addClass("highlighted"); // mark edge
+                    cy.edges(`[source = "${t.from.label}"][target = "${nextNode}"][label = "${t.symbol}"]`).addClass(hlClass); // mark edge
                 }, delay));
                 delay += 500;
             }
         });
         // Clear absolute status at end
         timeoutsRef.current.push(setTimeout(()=>{
-            cy.elements().removeClass("highlighted");
+            cy.elements().removeClass("highlighted highlighted-success highlighted-error");
         }, delay));
     };
     // Extract Symbols mapping
@@ -1517,7 +1536,7 @@ function Home() {
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "h-72 mt-4 flex flex-col gap-2 shrink-0",
+                                className: "h-48 mt-4 flex flex-col gap-2 shrink-0",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "flex gap-2",
