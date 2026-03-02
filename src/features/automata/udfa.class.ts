@@ -35,7 +35,6 @@ export class uDFA extends DFA {
           const U = nfa.enclosure(nfa.move(T, symbol));
 
           if (U.length === 0) {
-            transitions.add(tLabel);
             continue;
           }
 

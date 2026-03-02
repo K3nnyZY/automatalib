@@ -1,0 +1,66 @@
+[00:00:00.610] Server  LOG     ✓ Ready in 462ms
+[00:00:08.235] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:12.371] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:50.346] Browser WARN    The style property `shadow-blur: 10` is invalid
+[00:00:50.346] Browser WARN    The style property `shadow-color: #3b82f6` is invalid
+[00:00:50.346] Browser WARN    The style property `shadow-opacity: 0.2` is invalid
+[00:00:50.346] Browser WARN    The style property `shadow-offset-y: 4` is invalid
+[00:00:50.346] Browser WARN    The style property `shadow-color: #10b981` is invalid
+[00:00:50.346] Browser WARN    The style property `shadow-blur: 10` is invalid
+[00:00:50.346] Browser WARN    The style property `shadow-color: #3b82f6` is invalid
+[00:00:50.346] Browser WARN    The style property `shadow-opacity: 0.2` is invalid
+[00:00:50.346] Browser WARN    The style property `shadow-offset-y: 4` is invalid
+[00:00:50.346] Browser WARN    The style property `shadow-color: #10b981` is invalid
+[00:00:54.841] Browser WARN    The style property `shadow-blur: 10` is invalid
+[00:00:54.841] Browser WARN    The style property `shadow-color: #3b82f6` is invalid
+[00:00:54.841] Browser WARN    The style property `shadow-opacity: 0.2` is invalid
+[00:00:54.841] Browser WARN    The style property `shadow-offset-y: 4` is invalid
+[00:00:54.841] Browser WARN    The style property `shadow-color: #10b981` is invalid
+[00:00:54.841] Browser WARN    The style property `shadow-blur: 10` is invalid
+[00:00:54.841] Browser WARN    The style property `shadow-color: #3b82f6` is invalid
+[00:00:54.841] Browser WARN    The style property `shadow-opacity: 0.2` is invalid
+[00:00:54.841] Browser WARN    The style property `shadow-offset-y: 4` is invalid
+[00:00:54.841] Browser WARN    The style property `shadow-color: #10b981` is invalid
+[00:01:12.656] Browser LOG     Available options: ["mDFA (Minimized)","uDFA (Subset)","NFA (Thompson)"]
+[00:01:26.380] Browser WARN    The style property `shadow-blur: 10` is invalid
+[00:01:26.380] Browser WARN    The style property `shadow-color: #3b82f6` is invalid
+[00:01:26.381] Browser WARN    The style property `shadow-opacity: 0.2` is invalid
+[00:01:26.381] Browser WARN    The style property `shadow-offset-y: 4` is invalid
+[00:01:26.381] Browser WARN    The style property `shadow-color: #10b981` is invalid
+[00:01:26.381] Browser WARN    The style property `shadow-blur: 10` is invalid
+[00:01:26.381] Browser WARN    The style property `shadow-color: #3b82f6` is invalid
+[00:01:26.381] Browser WARN    The style property `shadow-opacity: 0.2` is invalid
+[00:01:26.381] Browser WARN    The style property `shadow-offset-y: 4` is invalid
+[00:01:26.381] Browser WARN    The style property `shadow-color: #10b981` is invalid
+[00:02:54.352] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:03:00.864] Browser WARN    The style property `shadow-blur: 10` is invalid
+[00:03:00.864] Browser WARN    The style property `shadow-color: #3b82f6` is invalid
+[00:03:00.864] Browser WARN    The style property `shadow-opacity: 0.2` is invalid
+[00:03:00.864] Browser WARN    The style property `shadow-offset-y: 4` is invalid
+[00:03:00.864] Browser WARN    The style property `shadow-color: #10b981` is invalid
+[00:03:00.864] Browser WARN    The style property `shadow-blur: 10` is invalid
+[00:03:00.864] Browser WARN    The style property `shadow-color: #3b82f6` is invalid
+[00:03:00.864] Browser WARN    The style property `shadow-opacity: 0.2` is invalid
+[00:03:00.864] Browser WARN    The style property `shadow-offset-y: 4` is invalid
+[00:03:00.864] Browser WARN    The style property `shadow-color: #10b981` is invalid
+[00:03:39.232] Browser WARN    The style property `shadow-blur: 10` is invalid
+[00:03:39.232] Browser WARN    The style property `shadow-color: #3b82f6` is invalid
+[00:03:39.232] Browser WARN    The style property `shadow-opacity: 0.2` is invalid
+[00:03:39.232] Browser WARN    The style property `shadow-offset-y: 4` is invalid
+[00:03:39.232] Browser WARN    The style property `shadow-color: #10b981` is invalid
+[00:03:39.232] Browser WARN    The style property `shadow-blur: 10` is invalid
+[00:03:39.232] Browser WARN    The style property `shadow-color: #3b82f6` is invalid
+[00:03:39.232] Browser WARN    The style property `shadow-opacity: 0.2` is invalid
+[00:03:39.232] Browser WARN    The style property `shadow-offset-y: 4` is invalid
+[00:03:39.232] Browser WARN    The style property `shadow-color: #10b981` is invalid
+[00:04:34.737] Server  LOG     ✓ Compiled in 17ms
+[00:04:44.214] Browser WARN    The style property `shadow-blur: 10` is invalid
+[00:04:44.214] Browser WARN    The style property `shadow-color: #3b82f6` is invalid
+[00:04:44.214] Browser WARN    The style property `shadow-opacity: 0.2` is invalid
+[00:04:44.214] Browser WARN    The style property `shadow-offset-y: 4` is invalid
+[00:04:44.214] Browser WARN    The style property `shadow-color: #10b981` is invalid
+[00:04:44.214] Browser WARN    The style property `shadow-blur: 10` is invalid
+[00:04:44.214] Browser WARN    The style property `shadow-color: #3b82f6` is invalid
+[00:04:44.214] Browser WARN    The style property `shadow-opacity: 0.2` is invalid
+[00:04:44.214] Browser WARN    The style property `shadow-offset-y: 4` is invalid
+[00:04:44.214] Browser WARN    The style property `shadow-color: #10b981` is invalid
