@@ -4,7 +4,7 @@ import { useState, useEffect, useRef, useMemo } from "react";
 import CytoscapeComponent from "react-cytoscapejs";
 import cytoscape from "cytoscape";
 import dagre from "cytoscape-dagre";
-import { Send, Download, Play } from "lucide-react";
+import { Send, Network } from "lucide-react";
 
 import { mDFA, uDFA, NFA } from "@/features/automata";
 import { cytoscape_layout, cytoscape_styles } from "@/config/cytoscape";
@@ -13,7 +13,7 @@ import type { TestResult } from "@/types/automata";
 cytoscape.use(dagre);
 
 export default function Home() {
-    const [expression, setExpression] = useState("(a|b)*abb");
+    const [expression, setExpression] = useState("");
     const [machineType, setMachineType] = useState<"mDFA" | "uDFA" | "NFA">("NFA");
     const [automaton, setAutomaton] = useState<mDFA | uDFA | NFA | null>(null);
     const [elements, setElements] = useState<any[]>([]);
@@ -23,14 +23,23 @@ export default function Home() {
 
     const cyRef = useRef<cytoscape.Core | null>(null);
 
-    const generateAutomaton = () => {
+    const generateAutomaton = (overrideType?: "mDFA" | "uDFA" | "NFA") => {
         try {
             setError(null);
             setTestResult(null);
+
+            if (!expression.trim()) {
+                setAutomaton(null);
+                setElements([]);
+                return;
+            }
+
             let instance;
 
-            if (machineType === "mDFA") instance = new mDFA(expression);
-            else if (machineType === "uDFA") instance = new uDFA(expression);
+            const targetType = overrideType || machineType;
+
+            if (targetType === "mDFA") instance = new mDFA(expression);
+            else if (targetType === "uDFA") instance = new uDFA(expression);
             else instance = new NFA(expression);
 
             setAutomaton(instance);
@@ -71,27 +80,40 @@ export default function Home() {
             setTestResult(result);
 
             // Animate Graph Path
-            const displayedRoute = result.accept
-                ? result.routes.find(r => r.valid)
-                : (result.routes.length > 0 ? result.routes.reduce((prev, current) => (prev.transitions.length > current.transitions.length) ? prev : current) : null);
+            const allRoutes = result.routes;
 
-            if (displayedRoute && displayedRoute.transitions.length > 0) {
+            if (allRoutes && allRoutes.length > 0) {
                 let delay = 0;
                 const cy = cyRef.current;
 
-                displayedRoute.transitions.forEach((t, i) => {
-                    setTimeout(() => {
-                        // Highlight Node
-                        cy.$(`#${t.from.label}`).addClass("highlighted");
+                const maxLength = Math.max(...allRoutes.map(r => r.transitions.length));
 
-                        // Highlight Edge if not the last node and has a symbol
-                        if (t.symbol !== undefined && i < displayedRoute.transitions.length - 1) {
-                            const nextNode = displayedRoute.transitions[i + 1].from.label;
-                            cy.edges(`[source = "${t.from.label}"][target = "${nextNode}"][label = "${t.symbol}"]`).addClass("highlighted");
-                        }
+                for (let i = 0; i < maxLength; i++) {
+                    setTimeout(() => {
+                        // Clear previous highlights for the 'live' tracing effect
+                        cy.elements().removeClass("highlighted");
+
+                        allRoutes.forEach(route => {
+                            if (i < route.transitions.length) {
+                                const t = route.transitions[i];
+                                // Highlight Node
+                                cy.$(`#${t.from.label}`).addClass("highlighted");
+
+                                // Highlight Edge if not the last node and has a symbol
+                                if (t.symbol !== undefined && i < route.transitions.length - 1) {
+                                    const nextNode = route.transitions[i + 1].from.label;
+                                    cy.edges(`[source = "${t.from.label}"][target = "${nextNode}"][label = "${t.symbol}"]`).addClass("highlighted");
+                                }
+                            }
+                        });
                     }, delay);
                     delay += 500; // 500ms delay per step
-                });
+                }
+
+                // Clear the absolute final state after the animation finishes
+                setTimeout(() => {
+                    cy.elements().removeClass("highlighted");
+                }, delay);
             }
 
         } catch (e: any) {
@@ -155,10 +177,17 @@ export default function Home() {
     };
 
     return (
-        <div className="flex h-screen w-full flex-col bg-slate-50 font-sans text-slate-900 border-t-8 border-slate-900">
+        <div className="flex h-screen w-full flex-col bg-slate-50 font-sans text-slate-900">
             {/* Top Navbar */}
-            <nav className="flex items-center justify-center p-4 border-b border-slate-200 bg-slate-100/50">
-                <div className="relative w-full max-w-2xl flex items-center">
+            <nav className="flex items-center justify-between p-4 border-b border-slate-200 bg-slate-100/50">
+                <div className="flex items-center gap-2 font-bold text-lg text-slate-800 tracking-tight ml-4">
+                    <div className="bg-slate-900 p-1.5 rounded-md">
+                        <Network className="text-white" size={18} />
+                    </div>
+                    Automata Simulator
+                </div>
+
+                <div className="relative w-full max-w-xl flex items-center mr-4">
                     <input
                         type="text"
                         className="w-full rounded-md border border-slate-200 px-4 py-2.5 text-sm shadow-sm outline-none transition-all focus:border-slate-800"
@@ -168,7 +197,7 @@ export default function Home() {
                         placeholder="Regex, e.g. (a|b)*abb"
                     />
                     <button
-                        onClick={generateAutomaton}
+                        onClick={() => generateAutomaton()}
                         className="absolute right-2 p-1.5 rounded bg-slate-900 text-white hover:bg-slate-800 transition-colors"
                     >
                         <Send size={16} />
@@ -231,8 +260,9 @@ export default function Home() {
                             className="w-full py-2.5 px-4 text-sm outline-none appearance-none"
                             value={machineType}
                             onChange={(e) => {
-                                setMachineType(e.target.value as any);
-                                setTimeout(generateAutomaton, 10);
+                                const newType = e.target.value as any;
+                                setMachineType(newType);
+                                setTimeout(() => generateAutomaton(newType), 10);
                             }}
                         >
                             <option value="NFA">Nondeterministic Finite Automaton (NFA)</option>
@@ -243,11 +273,6 @@ export default function Home() {
 
                     {/* Graph Canvas */}
                     <div className="flex-1 bg-slate-100/50 rounded-md border border-slate-200 relative overflow-hidden">
-
-                        {/* Download Button overlay */}
-                        <button className="absolute top-4 right-4 z-10 p-2 rounded-md bg-slate-900 text-white shadow-md hover:bg-slate-800">
-                            <Download size={18} />
-                        </button>
 
                         {error ? (
                             <div className="flex w-full h-full items-center justify-center text-red-500 font-medium text-sm">
@@ -298,33 +323,32 @@ export default function Home() {
                                 {testResult.accept ? `✓ Accepted: "${testString}" belongs to the language.` : `✕ Rejected: "${testString}" is invalid.`}
                             </div>
 
-                            {/* Render Path */}
-                            {(() => {
-                                const displayedRoute = testResult.accept
-                                    ? testResult.routes.find(r => r.valid)
-                                    : (testResult.routes.length > 0 ? testResult.routes.reduce((prev, current) => (prev.transitions.length > current.transitions.length) ? prev : current) : null);
-
-                                if (!displayedRoute || displayedRoute.transitions.length === 0) return null;
-
-                                return (
-                                    <div className="text-xs font-mono text-slate-500 bg-white p-3 rounded border border-slate-200 shadow-sm overflow-x-auto whitespace-nowrap">
-                                        <span className="font-semibold text-slate-700 mr-2">Path Taken:</span>
-                                        {displayedRoute.transitions.map((t: any, i: number) => (
-                                            <span key={i} className="inline-flex items-center">
-                                                <span className={`inline-block px-1.5 py-0.5 rounded border ${i === displayedRoute.transitions.length - 1 && testResult.accept
-                                                    ? 'bg-emerald-50 border-emerald-200 text-emerald-700 font-bold'
-                                                    : 'bg-slate-100 border-slate-200 text-slate-700'
-                                                    }`}>
-                                                    {t.from.label}
-                                                </span>
-                                                {t.symbol !== undefined && (
-                                                    <span className="mx-1.5 text-slate-400">-{t.symbol}→</span>
-                                                )}
+                            {/* Render All Paths */}
+                            {testResult.routes.length > 0 && (
+                                <div className="space-y-2 max-h-[30vh] overflow-y-auto pr-2 custom-scrollbar">
+                                    <h3 className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">Paths Evaluated ({testResult.routes.length}):</h3>
+                                    {testResult.routes.map((route: any, rIndex: number) => (
+                                        <div key={rIndex} className={`text-xs font-mono p-2.5 rounded border shadow-sm overflow-x-auto whitespace-nowrap ${route.valid ? 'bg-emerald-50 border-emerald-300' : 'bg-white border-slate-200 text-slate-500'}`}>
+                                            <span className={`font-bold mr-3 ${route.valid ? 'text-emerald-700' : 'text-slate-400'}`}>
+                                                {route.valid ? '✓ ACCEPTED:' : '✕ REJECTED:'}
                                             </span>
-                                        ))}
-                                    </div>
-                                );
-                            })()}
+                                            {route.transitions.map((t: any, i: number) => (
+                                                <span key={i} className="inline-flex items-center">
+                                                    <span className={`inline-block px-1.5 py-0.5 rounded border ${i === route.transitions.length - 1 && route.valid
+                                                        ? 'bg-emerald-500 border-emerald-600 text-white font-bold shadow-sm'
+                                                        : (route.valid ? 'bg-emerald-100 border-emerald-300 text-emerald-800' : 'bg-slate-100 border-slate-200 text-slate-600')
+                                                        }`}>
+                                                        {t.from.label}
+                                                    </span>
+                                                    {t.symbol !== undefined && (
+                                                        <span className={`mx-1.5 ${route.valid ? 'text-emerald-500 font-bold' : 'text-slate-300'}`}>-{t.symbol}→</span>
+                                                    )}
+                                                </span>
+                                            ))}
+                                        </div>
+                                    ))}
+                                </div>
+                            )}
                         </div>
                     )}
 
