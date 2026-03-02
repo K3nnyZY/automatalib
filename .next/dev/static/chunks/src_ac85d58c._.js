@@ -1433,7 +1433,7 @@ function Home() {
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
-                        className: "flex-1 flex flex-col relative p-4 bg-slate-50",
+                        className: "flex-1 flex flex-col relative p-4 bg-slate-50 min-w-0 overflow-hidden",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "w-full bg-white border border-slate-200 rounded-md shadow-sm mb-4",
@@ -1552,7 +1552,7 @@ function Home() {
                                         columnNumber: 25
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "flex-1 bg-white border border-slate-200 shadow-sm rounded-md p-3 overflow-y-auto custom-scrollbar flex flex-col min-w-0",
+                                        className: "flex-1 bg-white border border-slate-200 shadow-sm rounded-md p-3 overflow-auto custom-scrollbar flex flex-col min-w-0",
                                         children: testResult === null ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "m-auto text-slate-400 text-sm",
                                             children: "Paths evaluated during tests will be listed here."
@@ -1561,12 +1561,13 @@ function Home() {
                                             lineNumber: 327,
                                             columnNumber: 33
                                         }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "flex flex-col gap-3 min-w-0",
+                                            className: "flex flex-col gap-3 w-max min-w-full",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: `text-sm font-bold flex items-center justify-between px-1 ${testResult.accept ? "text-emerald-600" : "text-red-500"}`,
+                                                    className: `text-sm font-bold flex items-center justify-between px-1 sticky left-0 ${testResult.accept ? "text-emerald-600" : "text-red-500"}`,
                                                     children: [
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                            className: "pr-8",
                                                             children: testResult.accept ? `✓ Accepted: "${testString}" belongs to the language.` : `✕ Rejected: "${testString}" is invalid.`
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/page.tsx",
@@ -1592,12 +1593,12 @@ function Home() {
                                                     columnNumber: 37
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "space-y-2",
+                                                    className: "flex flex-col gap-2 w-full",
                                                     children: testResult.routes.map((route, rIndex)=>{
                                                         const isSelected = selectedRouteIndex === rIndex;
                                                         return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                                             onClick: ()=>animateRoute(rIndex),
-                                                            className: `w-full text-left text-xs font-mono p-2.5 rounded border shadow-sm overflow-x-auto whitespace-nowrap transition-all duration-200 
+                                                            className: `text-left text-xs font-mono p-2.5 rounded border shadow-sm whitespace-nowrap transition-all duration-200 
                                                         ${isSelected ? 'ring-2 ring-blue-500 ring-offset-1' : 'hover:border-blue-400 hover:shadow-md'} 
                                                         ${route.valid ? 'bg-emerald-50 border-emerald-300' : 'bg-slate-50 border-slate-200 text-slate-500'}`,
                                                             children: [
