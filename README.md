@@ -17,8 +17,6 @@
 
 **Automatalib** is a highly optimized engine that parses, compiles, and evaluates **Regular Expressions** by translating them natively into underlying computer science mathematical structures: Non-Deterministic Finite Automata (**NFA**) and Deterministic Finite Automata (**DFA**).
 
-Built fundamentally on **Clean Architecture** principles and pure algorithms like **Thompson's Construction** and **Subset Construction**, it guarantees 100% memory safety and predictability without dependencies.
-
 ## 🌟 Key Features
 
 - **Blazing Fast RegExp Parsing:** Compiles Regex strings down to an Abstract Syntax Tree (AST).
