@@ -1,16 +1,38 @@
 {
-  "name": "my-app",
-  "version": "0.1.0",
-  "private": true,
+  "name": "@k3nnyzy/automatalib",
+  "version": "1.0.0",
+  "description": "A lightweight, production-ready Finite State Automata Engine for TypeScript.",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
+    "build": "tsup src/index.ts --format cjs,esm --dts --clean",
+    "prepublishOnly": "npm run build"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/K3nnyZY/automatalib.git"
+  },
+  "keywords": [
+    "automata",
+    "fsa",
+    "dfa",
+    "nfa",
+    "regex",
+    "typescript"
+  ],
+  "author": "K3nnyZY",
+  "license": "MIT",
   "devDependencies": {
-    "@types/cytoscape-dagre": "^2.3.4",
-    "@types/node": "^20",
-    "typescript": "^5"
+    "@types/node": "^20.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   }
 }
