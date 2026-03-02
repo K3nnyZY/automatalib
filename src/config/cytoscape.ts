@@ -80,4 +80,22 @@ export const cytoscape_styles = [
             "text-margin-y": -10,
         },
     },
+    {
+        selector: "node.highlighted",
+        style: {
+            "background-color": "#eff6ff", // blue-50
+            "border-color": "#3b82f6", // blue-500
+            "color": "#1d4ed8", // blue-700
+            "border-width": 3,
+            "box-shadow": "0 0 10px #60a5fa",
+        },
+    },
+    {
+        selector: "edge.highlighted",
+        style: {
+            "line-color": "#3b82f6", // blue-500
+            "target-arrow-color": "#3b82f6", // blue-500
+            "width": 3,
+        },
+    },
 ];

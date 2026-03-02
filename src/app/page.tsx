@@ -8,6 +8,7 @@ import { Send, Download, Play } from "lucide-react";
 
 import { mDFA, uDFA, NFA } from "@/features/automata";
 import { cytoscape_layout, cytoscape_styles } from "@/config/cytoscape";
+import type { TestResult } from "@/types/automata";
 
 cytoscape.use(dagre);
 
@@ -18,7 +19,7 @@ export default function Home() {
     const [elements, setElements] = useState<any[]>([]);
     const [error, setError] = useState<string | null>(null);
     const [testString, setTestString] = useState("");
-    const [testResult, setTestResult] = useState<boolean | null>(null);
+    const [testResult, setTestResult] = useState<TestResult | null>(null);
 
     const cyRef = useRef<cytoscape.Core | null>(null);
 
@@ -34,6 +35,12 @@ export default function Home() {
 
             setAutomaton(instance);
             setElements(instance.cytograph());
+
+            // Clear previous graph highlights when generating a new automaton
+            setTimeout(() => {
+                cyRef.current?.elements().removeClass("highlighted");
+            }, 50);
+
         } catch (err: any) {
             setError(err.message || "Failed to parse expression.");
             setElements([]);
@@ -55,13 +62,42 @@ export default function Home() {
     }, [elements]);
 
     const testInputString = () => {
-        if (!automaton) return;
+        if (!automaton || !cyRef.current) return;
         try {
+            // Reset previous highlights
+            cyRef.current.elements().removeClass("highlighted");
+
             const result = automaton.test(testString);
-            setTestResult(result.accept);
+            setTestResult(result);
+
+            // Animate Graph Path
+            const displayedRoute = result.accept
+                ? result.routes.find(r => r.valid)
+                : (result.routes.length > 0 ? result.routes.reduce((prev, current) => (prev.transitions.length > current.transitions.length) ? prev : current) : null);
+
+            if (displayedRoute && displayedRoute.transitions.length > 0) {
+                let delay = 0;
+                const cy = cyRef.current;
+
+                displayedRoute.transitions.forEach((t, i) => {
+                    setTimeout(() => {
+                        // Highlight Node
+                        cy.$(`#${t.from.label}`).addClass("highlighted");
+
+                        // Highlight Edge if not the last node and has a symbol
+                        if (t.symbol !== undefined && i < displayedRoute.transitions.length - 1) {
+                            const nextNode = displayedRoute.transitions[i + 1].from.label;
+                            cy.edges(`[source = "${t.from.label}"][target = "${nextNode}"][label = "${t.symbol}"]`).addClass("highlighted");
+                        }
+                    }, delay);
+                    delay += 500; // 500ms delay per step
+                });
+            }
+
         } catch (e: any) {
             setError(e.message);
             setTestResult(null);
+            cyRef.current?.elements().removeClass("highlighted");
         }
     };
 
@@ -257,8 +293,38 @@ export default function Home() {
                     </div>
 
                     {testResult !== null && (
-                        <div className={`mt-2 text-sm font-medium px-2 ${testResult ? "text-green-600" : "text-red-500"}`}>
-                            {testResult ? `✓ Accepted: "${testString}" belongs to the language.` : `✕ Rejected: "${testString}" is invalid.`}
+                        <div className="mt-4 flex flex-col gap-3">
+                            <div className={`text-sm font-medium px-2 ${testResult.accept ? "text-green-600" : "text-red-500"}`}>
+                                {testResult.accept ? `✓ Accepted: "${testString}" belongs to the language.` : `✕ Rejected: "${testString}" is invalid.`}
+                            </div>
+
+                            {/* Render Path */}
+                            {(() => {
+                                const displayedRoute = testResult.accept
+                                    ? testResult.routes.find(r => r.valid)
+                                    : (testResult.routes.length > 0 ? testResult.routes.reduce((prev, current) => (prev.transitions.length > current.transitions.length) ? prev : current) : null);
+
+                                if (!displayedRoute || displayedRoute.transitions.length === 0) return null;
+
+                                return (
+                                    <div className="text-xs font-mono text-slate-500 bg-white p-3 rounded border border-slate-200 shadow-sm overflow-x-auto whitespace-nowrap">
+                                        <span className="font-semibold text-slate-700 mr-2">Path Taken:</span>
+                                        {displayedRoute.transitions.map((t: any, i: number) => (
+                                            <span key={i} className="inline-flex items-center">
+                                                <span className={`inline-block px-1.5 py-0.5 rounded border ${i === displayedRoute.transitions.length - 1 && testResult.accept
+                                                    ? 'bg-emerald-50 border-emerald-200 text-emerald-700 font-bold'
+                                                    : 'bg-slate-100 border-slate-200 text-slate-700'
+                                                    }`}>
+                                                    {t.from.label}
+                                                </span>
+                                                {t.symbol !== undefined && (
+                                                    <span className="mx-1.5 text-slate-400">-{t.symbol}→</span>
+                                                )}
+                                            </span>
+                                        ))}
+                                    </div>
+                                );
+                            })()}
                         </div>
                     )}
 
