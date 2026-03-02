@@ -6,7 +6,7 @@
     <a href="https://www.npmjs.com/package/automatalib" target="_blank">
         <img src="https://img.shields.io/npm/v/automatalib?color=blue&style=flat-square" alt="NPM Version" />
     </a>
-    <a href="https://github.com/tu-usuario/automatalib/blob/main/LICENSE" target="_blank">
+    <a href="https://github.com/K3nnyZY/automatalib/blob/main/LICENSE" target="_blank">
         <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-green.svg?style=flat-square" />
     </a>
     <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white" />
@@ -134,7 +134,7 @@ const machine = new uDFA("a*", { empty_symbol: "ε" }); // Default is "ϵ"
 ```
 
 ## 🤝 Contributing
-Contributions, issues and feature requests are welcome! Feel free to check the [issues page]().
+Contributions, issues and feature requests are welcome! Feel free to check the [issues page](https://github.com/K3nnyZY/automatalib/issues).
 
 ## 📝 License
 This project is licensed under the [MIT License](LICENSE).
