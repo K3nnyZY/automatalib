@@ -443,12 +443,40 @@
     display: table;
   }
 
+  .h-30 {
+    height: calc(var(--spacing) * 30);
+  }
+
+  .h-40 {
+    height: calc(var(--spacing) * 40);
+  }
+
   .h-48 {
     height: calc(var(--spacing) * 48);
   }
 
+  .h-50 {
+    height: calc(var(--spacing) * 50);
+  }
+
+  .h-55 {
+    height: calc(var(--spacing) * 55);
+  }
+
+  .h-56 {
+    height: calc(var(--spacing) * 56);
+  }
+
+  .h-60 {
+    height: calc(var(--spacing) * 60);
+  }
+
   .h-72 {
     height: calc(var(--spacing) * 72);
+  }
+
+  .h-90 {
+    height: calc(var(--spacing) * 90);
   }
 
   .h-full {

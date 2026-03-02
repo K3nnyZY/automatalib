@@ -880,7 +880,7 @@ const cytoscape_styles = [
         selector: "node",
         style: {
             "background-color": "#ffffff",
-            "border-color": "#475569",
+            "border-color": "#9ca3af",
             "border-width": 1.5,
             label: "data(id)",
             "text-valign": "center",
@@ -898,15 +898,15 @@ const cytoscape_styles = [
         style: {
             "border-width": 5,
             "border-style": "double",
-            "border-color": "#475569"
+            "border-color": "#9ca3af"
         }
     },
     {
         selector: "edge",
         style: {
             width: 1.5,
-            "line-color": "#64748b",
-            "target-arrow-color": "#64748b",
+            "line-color": "#000000",
+            "target-arrow-color": "#000000",
             "target-arrow-shape": "triangle",
             "curve-style": "bezier",
             label: "data(label)",
@@ -914,7 +914,7 @@ const cytoscape_styles = [
             "font-family": "system-ui, -apple-system, sans-serif",
             "font-size": "9px",
             "font-weight": "600",
-            "text-background-opacity": 1,
+            "text-background-opacity": 0,
             "text-background-color": "#f8fafc",
             "text-background-padding": "2px",
             "text-background-shape": "roundrectangle",
@@ -934,8 +934,8 @@ const cytoscape_styles = [
             "target-distance-from-node": 0,
             "source-arrow-shape": "none",
             "line-style": "solid",
-            "line-color": "#64748b",
-            "target-arrow-color": "#64748b",
+            "line-color": "#000000",
+            "target-arrow-color": "#000000",
             label: "start",
             "text-margin-x": -30,
             "text-margin-y": -10
@@ -1501,7 +1501,7 @@ function Home() {
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "h-48 mt-4 flex flex-col gap-2 shrink-0",
+                                className: "h-56 mt-4 flex flex-col gap-2 shrink-0",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "flex gap-2",

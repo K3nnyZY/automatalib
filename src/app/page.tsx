@@ -312,7 +312,7 @@ export default function Home() {
                     </div>
 
                     {/* Footer Tester Area */}
-                    <div className="h-48 mt-4 flex flex-col gap-2 shrink-0">
+                    <div className="h-56 mt-4 flex flex-col gap-2 shrink-0">
                         <div className="flex gap-2">
                             <input
                                 type="text"

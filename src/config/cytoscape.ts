@@ -19,7 +19,7 @@ export const cytoscape_styles = [
         selector: "node",
         style: {
             "background-color": "#ffffff",
-            "border-color": "#475569", // Slate-600
+            "border-color": "#9ca3af", // gray-400
             "border-width": 1.5,
             label: "data(id)",
             "text-valign": "center",
@@ -37,15 +37,15 @@ export const cytoscape_styles = [
         style: {
             "border-width": 5,
             "border-style": "double",
-            "border-color": "#475569",
+            "border-color": "#9ca3af",
         },
     },
     {
         selector: "edge",
         style: {
             width: 1.5,
-            "line-color": "#64748b", // Slate-500
-            "target-arrow-color": "#64748b",
+            "line-color": "#000000", // Black
+            "target-arrow-color": "#000000",
             "target-arrow-shape": "triangle",
             "curve-style": "bezier",
             label: "data(label)",
@@ -53,7 +53,7 @@ export const cytoscape_styles = [
             "font-family": "system-ui, -apple-system, sans-serif",
             "font-size": "9px",
             "font-weight": "600",
-            "text-background-opacity": 1,
+            "text-background-opacity": 0,
             "text-background-color": "#f8fafc",
             "text-background-padding": "2px",
             "text-background-shape": "roundrectangle",
@@ -73,8 +73,8 @@ export const cytoscape_styles = [
             "target-distance-from-node": 0,
             "source-arrow-shape": "none",
             "line-style": "solid",
-            "line-color": "#64748b",
-            "target-arrow-color": "#64748b",
+            "line-color": "#000000",
+            "target-arrow-color": "#000000",
             label: "start",
             "text-margin-x": -30,
             "text-margin-y": -10,
