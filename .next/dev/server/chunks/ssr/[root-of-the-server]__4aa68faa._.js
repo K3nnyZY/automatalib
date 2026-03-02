@@ -81,10 +81,6 @@ class TransitionsTable {
     }
 }
 class Automaton {
-    /** The singleton entry-point starting node for evaluation graph parsing */ initial_state;
-    /** Internal isolated array preserving accepting final states mapping constraints */ accept_states;
-    /** Custom configurations over generic behavior overrides */ config;
-    /** Global empty deterministic transition limit character ("ϵ" / "ε") */ empty_symbol;
     constructor(data, config){
         this.config = config;
         this.empty_symbol = config?.empty_symbol ?? "ϵ";
@@ -387,10 +383,6 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$features$2f$automata$
 ;
 ;
 class NFA extends __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$features$2f$automata$2f$base$2d$automaton$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Automaton"] {
-    /** Embedded internal regex compiled instance containing the parsed Syntax Tree */ regexp;
-    /**
-   * The transition table of the DFA.
-   */ transitions;
     constructor(expression, config){
         super(expression, config);
         this.generateTransitionsTable();
@@ -607,9 +599,6 @@ class StatesTable {
     }
 }
 class DFA extends __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$features$2f$automata$2f$base$2d$automaton$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Automaton"] {
-    /** Unoptimized underlying NFA component reference graph */ NFA;
-    /** Internal grouping states graph mappings generated from algorithm implementations */ states;
-    /** Strict 1-to-1 deterministic transitions matrix derived from Subset Construction */ transitions;
     lookUp(label, states) {
         for (const state of states){
             if (state.label === label) return state;
@@ -754,9 +743,6 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$features$2f$automata$
     }
 }
 class mDFA extends __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$features$2f$automata$2f$dfa$2e$class$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DFA"] {
-    /** Unoptimized underlying DFA resolved initially using Subset Construction */ uDFA;
-    /** Internal tracking mapping equivalent state nodes combinations */ equivalent_states;
-    /** History preserving replaced state identicals */ identifiables;
     constructor(expression, config){
         super(expression, config);
     }

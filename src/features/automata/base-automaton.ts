@@ -94,13 +94,13 @@ export class TransitionsTable {
  */
 export abstract class Automaton {
   /** The singleton entry-point starting node for evaluation graph parsing */
-  public initial_state!: State;
+  declare public initial_state: State;
   /** Internal isolated array preserving accepting final states mapping constraints */
-  public accept_states!: State[];
+  declare public accept_states: State[];
   /** Custom configurations over generic behavior overrides */
-  protected config?: AutomatonConfig;
+  declare protected config?: AutomatonConfig;
   /** Global empty deterministic transition limit character ("ϵ" / "ε") */
-  protected empty_symbol!: string;
+  declare protected empty_symbol: string;
 
   constructor(data: string, config?: AutomatonConfig) {
     this.config = config;

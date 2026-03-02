@@ -31,11 +31,11 @@ class Identifiables {
  */
 export class mDFA extends DFA {
   /** Unoptimized underlying DFA resolved initially using Subset Construction */
-  public uDFA!: uDFA;
+  declare public uDFA: uDFA;
   /** Internal tracking mapping equivalent state nodes combinations */
-  public equivalent_states!: StatesTable;
+  declare public equivalent_states: StatesTable;
   /** History preserving replaced state identicals */
-  public identifiables!: Identifiables;
+  declare public identifiables: Identifiables;
 
   constructor(expression: string, config?: AutomatonConfig) {
     super(expression, config);

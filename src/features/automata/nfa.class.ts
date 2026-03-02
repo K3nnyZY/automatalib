@@ -11,11 +11,11 @@ import type { SyntaxTreeNode, AutomatonConfig } from "@/types/automata";
  */
 export class NFA extends Automaton {
   /** Embedded internal regex compiled instance containing the parsed Syntax Tree */
-  public regexp!: RegExp;
+  declare public regexp: RegExp;
   /**
    * The transition table of the DFA.
    */
-  public transitions!: TransitionsTable;
+  declare public transitions: TransitionsTable;
 
   constructor(expression: string, config?: AutomatonConfig) {
     super(expression, config);

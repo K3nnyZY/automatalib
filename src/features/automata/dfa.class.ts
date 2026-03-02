@@ -47,11 +47,11 @@ export class StatesTable {
  */
 export abstract class DFA extends Automaton {
   /** Unoptimized underlying NFA component reference graph */
-  public NFA!: NFA;
+  declare public NFA: NFA;
   /** Internal grouping states graph mappings generated from algorithm implementations */
-  public states!: StatesTable;
+  declare public states: StatesTable;
   /** Strict 1-to-1 deterministic transitions matrix derived from Subset Construction */
-  public transitions!: TransitionsTable;
+  declare public transitions: TransitionsTable;
 
   protected lookUp(label: string, states: Set<State>): State | null {
     for (const state of states) {
