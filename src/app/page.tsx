@@ -326,20 +326,20 @@ export default function Home() {
                             {testResult === null ? (
                                 <div className="m-auto text-slate-400 text-sm">Paths evaluated during tests will be listed here.</div>
                             ) : (
-                                <div className="flex flex-col gap-3 min-w-max">
+                                <div className="flex flex-col gap-3 w-max min-w-full">
                                     <div className={`text-sm font-bold flex items-center justify-between px-1 sticky left-0 ${testResult.accept ? "text-emerald-600" : "text-red-500"}`}>
-                                        <span>{testResult.accept ? `✓ Accepted: "${testString}" belongs to the language.` : `✕ Rejected: "${testString}" is invalid.`}</span>
+                                        <span className="pr-8">{testResult.accept ? `✓ Accepted: "${testString}" belongs to the language.` : `✕ Rejected: "${testString}" is invalid.`}</span>
                                         <span className="text-xs uppercase tracking-wider text-slate-500 font-semibold">Paths Evaluated ({testResult.routes.length})</span>
                                     </div>
 
-                                    <div className="space-y-2">
+                                    <div className="flex flex-col gap-2 w-full">
                                         {testResult.routes.map((route: any, rIndex: number) => {
                                             const isSelected = selectedRouteIndex === rIndex;
                                             return (
                                                 <button
                                                     key={rIndex}
                                                     onClick={() => animateRoute(rIndex)}
-                                                    className={`w-full text-left text-xs font-mono p-2.5 rounded border shadow-sm whitespace-nowrap transition-all duration-200 
+                                                    className={`text-left text-xs font-mono p-2.5 rounded border shadow-sm whitespace-nowrap transition-all duration-200 
                                                         ${isSelected ? 'ring-2 ring-blue-500 ring-offset-1' : 'hover:border-blue-400 hover:shadow-md'} 
                                                         ${route.valid ? 'bg-emerald-50 border-emerald-300' : 'bg-slate-50 border-slate-200 text-slate-500'}`}
                                                 >
