@@ -9,30 +9,36 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup src/index.ts --format cjs,esm --dts --clean",
-    "prepublishOnly": "npm run build"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/K3nnyZY/automatalib.git"
-  },
-  "keywords": [
-    "automata",
-    "fsa",
-    "dfa",
-    "nfa",
-    "regex",
-    "typescript"
-  ],
-  "author": "K3nnyZY",
-  "license": "MIT",
   "devDependencies": {
+    "@tailwindcss/postcss": "^4.2.1",
+    "@types/cytoscape": "^3.21.9",
+    "@types/cytoscape-dagre": "^2.3.4",
     "@types/node": "^20.0.0",
+    "@types/react": "^19.2.14",
+    "@types/react-cytoscapejs": "^1.2.6",
+    "@types/react-dom": "^19.2.3",
+    "eslint": "^9.39.3",
+    "eslint-config-next": "^16.1.6",
+    "tailwindcss": "^4.2.1",
     "tsup": "^8.0.0",
     "typescript": "^5.0.0"
   },
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
+  },
+  "dependencies": {
+    "cytoscape": "^3.33.1",
+    "cytoscape-dagre": "^2.5.0",
+    "lucide-react": "^0.575.0",
+    "next": "^16.1.6",
+    "react": "^19.2.4",
+    "react-cytoscapejs": "^2.0.0",
+    "react-dom": "^19.2.4"
   }
 }

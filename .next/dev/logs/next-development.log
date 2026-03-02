@@ -1,0 +1,20 @@
+[00:00:01.606] Server  LOG     
+[00:00:01.606] Server  LOG       We detected TypeScript in your project and reconfigured your tsconfig.json file for you.
+[00:00:01.606] Server  LOG       The following suggested values were added to your tsconfig.json. These values can be changed to fit your project's needs:
+
+[00:00:01.606] Server  LOG       	- lib was set to dom,dom.iterable,esnext
+[00:00:01.606] Server  LOG       	- allowJs was set to true
+[00:00:01.606] Server  LOG       	- noEmit was set to true
+[00:00:01.606] Server  LOG       	- incremental was set to true
+[00:00:01.606] Server  LOG       	- include was updated to add '.next/types/**/*.ts'
+[00:00:01.607] Server  LOG       	- include was updated to add '.next/dev/types/**/*.ts'
+[00:00:01.607] Server  LOG       	- plugins was updated to add { name: 'next' }
+[00:00:01.607] Server  LOG     
+[00:00:01.607] Server  LOG       The following mandatory changes were made to your tsconfig.json:
+
+[00:00:01.607] Server  LOG       	- resolveJsonModule was set to true (to match webpack resolution)
+[00:00:01.607] Server  LOG       	- isolatedModules was set to true (requirement for SWC / Babel)
+[00:00:01.607] Server  LOG       	- jsx was set to react-jsx (next.js uses the React automatic runtime)
+[00:00:01.607] Server  LOG     
+[00:00:01.656] Server  LOG     ✓ Ready in 1540ms
+[00:00:22.825] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
